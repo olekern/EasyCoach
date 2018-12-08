@@ -1,0 +1,182 @@
+.square {
+    padding-top: 14px;
+    padding-bottom: 9px;
+}
+
+#team:hover {
+    background-color: #5c5c5c;
+}
+
+#team:hover #teamBox {
+    display: block;
+}
+
+#team:hover a {
+    margin-right: 8px;
+}
+
+.box {
+    width: 7px;
+    height: 83px;
+    top: 0;
+    margin-top: -14px;
+    background-color: #cf2424;
+    float: left;
+    border-right: 1px solid #484848;
+}
+
+#dashBox,
+#calBox,
+#attendBox,
+#survBox,
+#teamBox {
+    display: none;
+}
+
+#dashbord:hover {
+    background-color: #5c5c5c;
+}
+
+#dashbord:hover #dashBox {
+    display: block;
+}
+
+#dashbord:hover a {
+    margin-right: 8px;
+}
+
+#calendar:hover {
+    background-color: #5c5c5c;
+}
+
+#calendar:hover #calBox {
+    display: block;
+}
+
+#calendar:hover a {
+    margin-right: 8px;
+}
+
+#attendance:hover {
+    background-color: #5c5c5c;
+}
+
+#attendance:hover #attendBox {
+    display: block;
+}
+
+#attendance:hover a {
+    margin-right: 8px;
+}
+
+#survey:hover {
+    background-color: #5c5c5c;
+}
+
+#survey:hover #survBox {
+    display: block;
+}
+
+#survey:hover a {
+    margin-right: 8px;
+}
+
+#btm {
+    width: 150px;
+    color: white;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 15px;
+    font-weight: 300;
+    text-align: center;
+    font-size: 12px;
+}
+
+.wrapper {
+    position: relative;
+    float: right;
+    top: 79px;
+    width: calc(100% - 150px);
+}
+
+/*=====================*\
+|*         .CSV        *| 
+\*=====================*/
+
+#upload-team {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    background-color: white;
+    box-shadow: 0px 1px 8px -1px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    padding-bottom: 70px;
+}
+
+#upload-team #csv-explanation {
+    padding-top: 30px;
+    font-size: 20px;
+    font-weight: 700;
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+
+#upload-team .check {
+    margin-top: 7px;
+}
+
+#upload-box {
+    margin-top: 30px;
+}
+
+button {
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 6px 8px;
+    color: #fff;
+    border: none;
+    background-color: #cf2424;
+    border-bottom: 3px solid #520e0e;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    width: 200px;
+    border-radius: 15px;
+}
+
+#import {
+    margin-top: 40px;
+}
+
+#check-content {
+    margin-top: 30px;
+    font-size: 15px;
+}
+
+#display-table table {
+    font-size: 11px;
+    background-color: white;
+    vertical-align: middle;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+}
+
+#display-table th {
+    border: 1px solid black;
+    padding: 7px 8px;
+}
+
+.otherrows:nth-child(odd) {
+    background-color: #eeee;
+}
+
+.firstrow {
+    background-color: #3d3d3d;
+    color: white;
+}

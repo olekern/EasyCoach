@@ -1,0 +1,62 @@
+<!doctype html>
+<!-- Treningsapp -->
+<html>
+
+    <head>
+
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/parse/1.11.1/parse.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="../css/style.css" />
+        <link rel="stylesheet" type="text/css" href="../css/teamStyle.css" />
+        <link rel="stylesheet" type="text/css" href="../css/app.css" />
+        <title>EasyCoach</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+        <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+        <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+        <link rel="stylesheet" href="/resources/demos/style.css">
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
+        <script src="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
+        <link rel="stylesheet" href="./font-awesome-4.6.3/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Arimo" rel="stylesheet"> 
+        <link rel="icon" type="image/png" href="../img/blackfavicon-32x32.png" sizes="32x32" />
+        <link rel="icon" type="image/png" href="../img/blackfavicon-16x16.png" sizes="16x16" />
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="../css/multiple-select.css" rel="stylesheet"/>
+    	
+    </head>
+
+
+    <body>
+
+	    <script type="text/javascript">
+        Parse.initialize("wSHRpQQxW6jgmxRQV8UXogZcOiRvO8s8VoVmlMYI", "imVCWFzFX4fVRGcqX8ioidD686IPb5ELzHd3WkJw");
+        Parse.serverURL = 'https://klubbenheroku.herokuapp.com/parse';
+
+        function redirect() {
+            var uagent = navigator.userAgent.toLowerCase();
+            if (uagent.search("iphone") > -1) {
+                location.href = "https://itunes.apple.com/no/app/klubben/id1101856959?l=nb&mt=8";
+            }
+            else if (uagent.indexOf("android") > -1) {
+                location.href = "https://play.google.com/store/apps/details?id=com.lustek.klubben";
+            }
+            else {
+                
+                var currentuser = Parse.User.current();
+                if (currentuser) {
+                    location.href = "newsFeed.html";
+		}
+                else {
+                    location.href = "registration.html";
+                }
+            }
+        }
+
+	redirect();
+    </script>
+
+    <h1 onclick="redirect()" style="font-size: 50px; text-align: center; font-weight: 400; margin-top: 200px;">Blir du ikke videresendt? Trykk her.</h1>
+    </body>
+
+</html>

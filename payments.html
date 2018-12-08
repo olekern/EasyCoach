@@ -1,0 +1,176 @@
+<!doctype html>
+
+<html>
+
+<head>
+    <title>EasyCoach | Upgrade Your Team To Premium</title>
+    <meta name="description" description="Upgrade your team to Premium and get access to all EasyCoach features. For less than 3€ per month for a team.">
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
+    <meta name="viewport" content="width=device-width" />
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parse/1.11.1/parse.min.js"></script>
+    <link rel="apple-touch-icon" sizes="57x57" href="./favicons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="./favicons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="./favicons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="./favicons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="./favicons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="./favicons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="./favicons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="./favicons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="./favicons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="./favicons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicons/favicon-16x16.png">
+    <link rel="manifest" href="./favicons/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="./favicons/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="apple-mobile-web-app-title" content="EasyCoach">
+    <meta name="application-name" content="EasyCoach">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" type="text/css" href="./src/css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300, 400, 500, 600" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./src/css/payments.css">
+
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+    <script type="text/javascript" src="./src/fullPage.js-master/jquery.fullPage.js"></script>
+
+    <script src="./src/garand-sticky-73b0fbe/jquery.sticky.js"></script>
+
+    <link href="./src/css/multiple-select.css" rel="stylesheet" />
+</head>
+
+<body>
+
+    <script>
+        var language = "EN";
+
+    </script>
+
+
+    <div id="nav">
+        <img src="./src/img/new-logo.png" />
+        <a id="name" href="index.html">EasyCoach</a>
+        <a id="app" class="nav-link" onclick="getLink()">Gå til appen</a>
+        <a id="help" class="nav-link" href="./guide.html">Hjelp</a>
+    </div>
+
+    <script>
+        var s = 'file:///C:/Users/h/Desktop/klubbenapp/index.html#secondPage';
+        var r = s.replace(/^(.+?)_[^.]+(\.[^\/.]+)$/i, '$1$2');
+
+    </script>
+
+
+    <script type="text/javascript">
+        Parse.initialize("wSHRpQQxW6jgmxRQV8UXogZcOiRvO8s8VoVmlMYI", "imVCWFzFX4fVRGcqX8ioidD686IPb5ELzHd3WkJw");
+        Parse.serverURL = 'https://klubbenheroku.herokuapp.com/parse';
+
+        function getLink() {
+            var uagent = navigator.userAgent.toLowerCase();
+            if (uagent.search("iphone") > -1) {
+                location.href = "https://itunes.apple.com/no/app/klubben/id1101856959?l=nb&mt=8";
+            } else if (uagent.indexOf("android") > -1) {
+                location.href = "https://play.google.com/store/apps/details?id=com.lustek.klubben";
+            } else {
+
+                var currentuser = Parse.User.current();
+                if (currentuser) {
+                    location.href = "./home.html";
+                } else {
+                    location.href = "./registration.html";
+                }
+            }
+        }
+
+        var id;
+        $(window).resize(function() {
+            clearTimeout(id);
+            id = setTimeout(doneResizing, 500);
+
+        });
+
+        function doneResizing() {
+            var height = $(window).innerWidth();
+            //alert(height);   
+        }
+
+    </script>
+
+    <script type="text/javascript" src="./src/js/getteam.js"></script>
+
+    <script src="https://checkout.stripe.com/checkout.js"></script>
+
+    <div id="payments">
+
+        <h1 id="upgrade-title">Upgrade your team to Premium</h1>
+        <p id="description">Unlock new features on EasyCoach by upgrading your team to Premium. For only €35 a year, the whole team will recieve the benefits of the Premium team.</p>
+
+        <div id="user">
+            <div id="list-form"></div>
+            <div id="list-log"></div>
+            <div id="list-teams"></div>
+        </div>
+
+        <div class="terms" id="payTerms" onclick="showPay()">
+            <input id="terms" name="terms" type="checkbox" class="checkbox" unchecked/>
+            <label for="terms"></label>
+            <h4 id="termh">I have read and agreed to the terms for the EasyCoach subscriptions, found in the box below
+            </h4>
+        </div>
+        <div id="information">
+            <p><span>The EasyCoach Premium subscription</span> will continue year-to-year until terminated. You unsubscribe by clicking "Cancel subscription" at https://easycoach-app.com/team. Unless you cancel your membership before your yearly billing date, you authorize us to charge your next years's membership fee to the payment method given. Cancelling the subscription does not result in refunds of already payed membership fees.</p>
+
+            <p>The terms above does also apply to<span> the 30 day free trial</span>. When the free trial is finished, you automatically start the payed Premium subscription unless you have cancelled the membership. </p>
+        </div>
+        <h2 id="acceptFirst">You have to accept the terms before you are able to continue the upgrade.</h2>
+        <button id="customButton"></button>
+        <div id="card-logos">
+            <img id="visa" src="./src/img/visa-logo.png">
+            <img id="mastercard" src="./src/img/mastercard-logo.png">
+            <img id="american-express" src="./src/img/american-express-logo.jpg">
+        </div>
+
+    </div>
+
+    <div id="loading" style="display: none">
+        <img src="./src/loading/Preloader_2.gif">
+    </div>
+
+
+    <script>
+        function English() {
+
+            localStorage.setItem("language", "EN");
+            location.href = "./index.html";
+        }
+
+        function Norwegian() {
+            localStorage.setItem("language", "NO");
+            location.href = "index.html";
+        }
+
+    </script>
+
+    <div id="footer">
+        <p>&copy; 2018 Lustek AS</p>
+        <a onclick="English()">EN</a>
+        <a onclick="Norwegian()">NO</a>
+    </div>
+
+
+    <script type="text/javascript" src="./src/js/multiple-select.js"></script>
+    <script src="./src/js/payments.js"></script>
+
+
+</body>
+
+</html>

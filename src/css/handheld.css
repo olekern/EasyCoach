@@ -1,0 +1,294 @@
+html{
+    font-family: 'Helvetica Neue', sans-serif;
+    width: 100%;
+    margin:0;
+    padding:0;
+    overflow-x: hidden;
+}
+body{
+    width: 100%;
+    overflow-x: hidden;
+    margin:0;
+    padding:0;
+}
+
+#dvLoading
+	{
+	   background:#000 url(images/loader.gif) no-repeat center center;
+	   height: 100%;
+	   width: 100%;
+	   position: fixed;
+	   z-index: 1000;
+	}
+
+	
+.nav{
+    width: 100%;
+    height: 60px;
+    background-color: #cf2424;
+    z-index: 25;
+    position: fixed;
+    border-bottom: 1px solid #b62929;
+    top: 0;
+    overflow-x: hidden; 
+}
+
+.nav img{
+    height: 50px;
+    width: auto;
+    float: left;
+    margin-left: 30px;
+    margin-top: 5px;
+}
+
+.navn{
+    text-decoration: none;
+    float: left;
+    display: block;
+    margin-top: 10px;
+    margin-left: 70px;
+    color: white;
+    text-transform: uppercase;
+    font-size: 32px;
+    font-weight: 400;
+    
+}
+
+.app{
+    display: none;
+    
+}
+
+#first{
+    display: none;
+}
+
+#second iframe{
+    width: 100%;
+}
+
+
+#third{
+    width: 100%;
+    height: 130px;
+    background-color: white;
+    right: 0;
+    margin-right: 0;
+    padding-right: 0;
+    border-right: 0;
+}
+
+#sitat img{
+    display: none;
+}
+
+#sitat p{
+    font-size: 20px;
+    font-weight: 200;
+    text-align: center;
+    color: black;
+    padding-top: 5px;
+}
+
+#sitat img{
+    display: none;
+}
+
+
+#third h4{
+    float: right;
+    font-size: 12px;
+    font-weight: 300;
+    margin-top: -15px;
+    margin-right: 15px;
+}
+
+#fifth{
+    width: 100%;
+    height: 1050px;
+    background-color: #eafdf8;
+    right: 0;
+    margin-right: 0;
+    padding-right: 0;
+    border-right: 0;
+}
+
+#statsios{
+    width: 90%;
+    height: auto;
+    padding-top: 80px;
+    padding-bottom: 30px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#statsios h3{
+    font-size: 23px;
+    font-weight: 100;
+    padding-top: 10px;
+}
+
+#statsios h2{
+    font-size: 32px;
+    font-weight: 300;
+    margin-top: -10px;
+}
+
+#statsios p{
+    font-size: 23px;
+    font-weight: 200;
+}
+
+#statsmac{
+    float: left;
+    padding-top: 600px;
+    margin-left: -400px;
+    width: 100px;
+}
+
+#chart{
+    font-size: 60px;
+    float: left;
+    margin-top: 100px;
+}
+
+#statsmac h2{
+    text-align: center;
+    font-size: 27px;
+    font-weight: 400;
+    width: 200px;
+    margin-top: 100px;
+    margin-left: 100px;
+}
+
+
+#iosStat{
+    width: 250px;
+    height: auto;
+    float: left;
+    margin-left: 55px;
+}
+
+
+#macStat{
+    width: 380px;
+    height: auto;
+    float: left;
+    margin-top: -35px;
+}
+
+#sixth{
+    height: 745px;
+    right: 0;
+    margin-right: 0;
+    padding-right: 0;
+    border-right: 0;
+    width: 100%;
+    background-color: #d0e3cc;
+    bottom: 0;
+}
+
+#androidrep{
+    width: 250px;
+    height: auto;
+    float: left;
+    margin-left: 55px;
+}
+
+#sign {
+    width: 45px;
+    font-size: 40px;
+    float: left;
+    padding-top: -15px;
+    margin-left: 25px;
+}
+
+#inbox, #map, #slider{
+    margin-top: 20px;
+}
+
+#pun{
+    float: left;
+    margin-top: -22px;
+    margin-left: 30px;
+}
+
+#pun h2{
+    font-size: 15px;
+    font-weight: 400;
+    margin-top: 49px;
+}
+
+#seventh{
+    display: none;
+}
+
+#topFoot{
+    display: none;
+}
+#register{
+    display: none;
+}
+
+
+#eighth{
+    background-color: #d0e3cc; 
+    height: 330px;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+}
+
+#mail{
+    margin-top: -20px;
+}
+#mailIcon{
+    font-size: 40px;
+    margin-left: 20px;
+    float: left;
+}
+
+#mail h5 {
+    font-size: 16px;
+    font-weight: 400;
+    margin-left: 10px;
+    text-transform: uppercase;
+    float: left;
+    margin-left: 30px;
+    margin-top: 13px;
+}
+
+
+#facebook{
+    margin-left: 45%;
+    margin-top: 20px;
+    font-size: 40px;
+    text-decoration: none;
+    color: black;
+}
+
+#youtube{
+    display: none;
+}
+
+#apple svg{
+    height: 61px;
+    width: auto;
+    float: left;
+    margin-top: 10px;
+    margin-left: 73px;
+}
+
+#android{
+    height: 91px;
+    width: auto;
+    float: left;
+    margin-top: 0px;
+    margin-left: 60px;
+}
+#eighth p{
+    display: none;
+    
+}
+

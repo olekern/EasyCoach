@@ -1,0 +1,527 @@
+#send-in{
+    cursor: pointer;
+    float: right; 
+    margin-right: 60px;
+    height: 79px;
+    width: 120px;
+}
+
+#send-text{
+    height: 40px;
+    width: 120px;
+    line-height: 40px;
+    position: absolute;
+    margin-top: 19px;
+}
+
+#send-in:hover > #send-text p{
+    color: lightgrey;
+}
+#send-in:hover > #send-text i{
+    color: lightgrey;
+}
+.nav p{
+    color: white;
+    font-size: 20px;
+    display: inline-block;
+}
+
+.nav i{
+    font-size: 40px;
+    color: white;
+    float: right;
+}
+
+.square{
+    padding-top: 14px;
+    padding-bottom: 9px;
+}
+
+.box{
+    width: 7px;
+    height: 83px;
+    top: 0;
+    margin-top: -14px;
+    background-color: #cf2424;
+    float: left;
+    border-right: 1px solid #484848;
+}
+
+#dashBox, #calBox, #attendBox, #survBox, #teamBox{
+    display: none;
+}
+#dashbord:hover{
+    background-color: #5c5c5c;
+}
+
+#dashbord:hover #dashBox{
+    display: block;
+}
+
+#dashbord:hover a{
+    margin-right: 8px;
+}
+
+#calendar:hover{
+    background-color: #5c5c5c;
+}
+
+#calendar:hover #calBox{
+    display: block;
+}
+
+#calendar:hover a{
+    margin-right: 8px;
+}
+
+
+#attendance:hover{
+    background-color: #5c5c5c;
+}
+#attendance:hover #attendBox{
+    display: block;
+}
+
+#attendance:hover a{
+    margin-right: 8px;
+}
+#survey:hover{
+    background-color: #5c5c5c;
+}
+#survey:hover #survBox{
+    display: block;
+}
+
+#survey:hover a{
+    margin-right: 8px;
+}
+
+#team:hover{
+    background-color: #5c5c5c;
+}
+#team:hover #teamBox{
+    display: block;
+}
+
+#team:hover a{
+    margin-right: 7px;
+}
+
+
+#btm{
+    width: 150px;
+    color: white;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 15px;
+    font-weight: 300;
+    text-align: center;
+    font-size: 12px;
+}
+
+.wrapper {
+    position: relative;
+    float: right;
+    top: 79px;
+    width: calc(100% - 150px);
+}
+
+#create-reports{
+    width: 70%;
+    max-width: 700px;
+    min-width: 450px;
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    border: 1px solid #d5d5d5;
+}
+
+#create-doc{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25px;
+}
+
+#topRightBtn{
+    float: right;
+    position: relative;
+}
+
+#create-doc h2{
+    font-size: 23px;
+    text-align: center;
+}
+
+#title{
+    border: none;
+    border-bottom: 1px solid #d5d5d5;
+    width: 240px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.date-switch{
+    width: 330px;
+    height: 34px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    line-height: 34px;
+}
+
+#single{
+    float: left;
+}
+
+#plural{
+    float: right;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+    margin-left: 20px;
+}
+
+.switch input {display:none;}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #cf2424;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #cf2424;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+#date-pick{
+    width: 220px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+}
+
+#date-pick input{
+    margin-left: 50px;
+}
+
+.datepicker{
+    z-index: 100;
+    position: absolute;
+    margin-left: 10px;
+}
+
+#days{
+    height: 30px;
+    width: 400px;
+    line-height: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+}
+
+.day{
+    display: inline-block;
+    margin-left: 8px;
+}
+
+.list-question{
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.questionDiv{
+    margin-top: 30px;
+}
+
+.questionDiv h3{
+    text-align: center;
+    font-size: 22px;
+}
+
+.question-title{
+    border: none;
+    border-bottom: 1px solid #d5d5d5;
+    width: 240px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.choose-type{
+    width: 230px;
+    margin-top: 35px;
+    margin-left: auto;
+    margin-right: auto;  
+}
+
+.choose-type select{
+    margin-left: 13px;
+}
+
+#txt{
+    width: 260px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#txt textarea{
+    border: none;
+    border-bottom: 1px solid #d5d5d5;
+    width: 260px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.rating{
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
+
+.comment-check{
+    width: 140px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.choose-nr{
+    width: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+}
+
+.ratingText{
+    border: none;
+    border-bottom: 1px solid #d5d5d5;
+    width: 280px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    text-align: center;
+    font-size: 16px;
+}
+
+#rangeSlider{
+    width: 180px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+}
+
+.output-number{
+    margin-left: 85px;
+}
+
+.yesno{
+    width: 280px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#yesnoSwitch{
+    width: 150px;
+}
+
+.yesText{
+    border: none;
+    border-bottom: 1px solid #d5d5d5;
+    width: 280px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.add-alternativ{
+    width: 280px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25px;
+}
+
+.add-alt{
+    width: 170px;
+    height: 40px;
+    line-height: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.add-alt i{
+    font-size: 40px;
+    color: #cf2424;
+    float: left;
+}
+
+.add-alt p{
+    float: right;
+}
+
+.add-alt button{
+    text-decoration: none;
+}
+
+.add-alternativ textarea{
+    border: none;
+    border-bottom: 1px solid #d5d5d5;
+    width: 250px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.add-alternativ select{
+    width: 100px;
+    display: block;
+    margin-top: 25px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.date-time{
+    width: 105px; 
+    margin-left: auto; 
+    margin-right: auto;
+    margin-top: 30px;
+}
+
+.time-rad{
+    margin-left: auto;
+    margin-right: auto;
+    width: 
+}
+
+#time-pick{
+    width: 160px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+}
+
+#addQuestBtn{
+    width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    height: 60px;
+    line-height: 60px; 
+}
+
+#addQuestBtn i{
+    color: #cf2424;
+    font-size: 60px;
+}
+
+#addQuestBtn p{
+    float: right;
+    font-size: 21px;
+    
+}
+
+textarea{
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", 
+  Microsoft Sans Serif;
+    font-weight: 400;
+    font-size: 15px;
+    overflow: auto;
+    resize: none;
+    border: 1px solid #d5d5d5;
+    position: relative;
+    height: 35px;
+    padding-left: 10px;
+    padding-top: 8px;
+    padding-right: 10px;
+    z-index: 10;
+}
+
+/*
+button{
+    padding: 4px 5px;
+    color: #fff;
+    border: none;
+    background-color: #01baef;
+    border-bottom: 3px solid #00a7d7;
+    font-size: 11px;
+    font-weight: 500;
+    display: block;
+    cursor: pointer;
+}
+*/
+
+#id{
+    margin-top: 400px;
+    float: right;
+    position: relative;
+}
+
+#add-alt{
+    float: left;
+}
+

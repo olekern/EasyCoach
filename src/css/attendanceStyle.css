@@ -1,0 +1,637 @@
+html {
+    height: auto;
+    padding-bottom: 200px;
+}
+
+.square {
+    padding-top: 14px;
+    padding-bottom: 9px;
+}
+
+#attendance {
+    background-color: #5c5c5c;
+    border-top: 1px solid #484848;
+}
+
+#attendance a {
+    margin-right: 7px;
+}
+
+.box {
+    width: 7px;
+    height: 83px;
+    top: 0;
+    margin-top: -14px;
+    background-color: #cf2424;
+    float: left;
+    border-right: 1px solid #484848;
+}
+
+#calBox,
+#survBox,
+#forBox,
+#teamBox,
+#dashBox {
+    display: none;
+}
+
+#calendar:hover {
+    background-color: #5c5c5c;
+    border-top: 1px solid #484848;
+    margin-top: -1px;
+}
+
+#calendar:hover #calBox {
+    display: block;
+}
+
+#calendar:hover a {
+    margin-right: 8px;
+}
+
+#dashbord:hover {
+    background-color: #5c5c5c;
+}
+
+#dashbord:hover #dashBox {
+    display: block;
+}
+
+#dashbord:hover a {
+    margin-right: 8px;
+}
+
+#survey:hover {
+    background-color: #5c5c5c;
+    border-top: 1px solid #484848;
+    margin-top: -1px;
+}
+
+#survey:hover #survBox {
+    display: block;
+}
+
+#survey:hover a {
+    margin-right: 8px;
+}
+
+#forberedelser:hover {
+    background-color: #5c5c5c;
+    border-top: 1px solid #484848;
+}
+
+#forberedelser:hover #forBox {
+    display: block;
+}
+
+#forberedelser:hover a {
+    margin-right: 7px;
+}
+
+#team:hover {
+    background-color: #5c5c5c;
+    border-top: 1px solid #484848;
+    margin-top: -1px;
+}
+
+#team:hover #teamBox {
+    display: block;
+}
+
+#team:hover a {
+    margin-right: 8px;
+}
+
+#btm {
+    width: 150px;
+    color: white;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 8px;
+    font-weight: 300;
+    text-align: center;
+    font-size: 12px;
+}
+
+.doubleWrap {
+    margin-left: 50px;
+}
+
+svg[aria-label="A chart."] > g > g:last-child {
+    pointer-events: none
+}
+
+@media all and (min-width: 1300px) {
+    #piechart {
+        float: right;
+        margin-right: 50px;
+        margin-top: 120px;
+        position: relative;
+        background-color: white;
+        min-height: 400px;
+        width: 600px;
+        box-shadow: 0px 1px 8px -1px rgba(0, 0, 0, 0.5);
+    }
+}
+
+@media all and (max-width: 1300px) {
+    #piechart {
+        left: 0;
+        margin-left: auto;
+        margin-right: auto;
+        width: 600px;
+        margin-top: 30px;
+        min-height: 400px;
+        background-color: white;
+        box-shadow: 0px 1px 8px -1px rgba(0, 0, 0, 0.5);
+    }
+}
+
+#loader {
+    display: block;
+    height: 70px;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 160px;
+}
+
+@media all and (min-width: 1300px) {
+
+    #list-player-attendance {
+        width: 420px;
+        float: left;
+        background-color: white;
+        margin-top: 30px;
+        box-shadow: 0px 1px 8px -1px rgba(0, 0, 0, 0.5);
+    }
+}
+
+@media all and (max-width: 1300px) {
+
+    #list-player-attendance {
+        width: 420px;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: white;
+        margin-top: 30px;
+        box-shadow: 0px 1px 8px -1px rgba(0, 0, 0, 0.5);
+    }
+}
+
+
+/*=====================*\
+|*     DOWNLOADCSV     *|
+\*=====================*/
+
+#download-box{
+    width: 420px;
+    height: 80px;
+}
+#downloadCsv {
+    height: 70px;
+    cursor: pointer
+}
+
+#downloadCsv i {
+    color: #cf2424;
+    font-size: 40px;
+    margin-left: 50px;
+    margin-top: 15px;
+    float: left;
+}
+
+#downloadCsv h1 {
+    float: right;
+    font-size: 17px;
+    font-weight: 600;
+    margin-right: 15px;
+    margin-top: 24px;
+    color: black;
+}
+
+@media all and (min-width: 1300px) {
+
+    #downloadCsv {
+        width: 420px;
+        margin-top: 30px;
+        float: left;
+        background-color: white;
+        box-shadow: 0px 1px 8px -1px rgba(0, 0, 0, 0.5);
+    }
+
+}
+
+
+@media all and (max-width: 1300px) {
+
+    #downloadCsv {
+        width: 420px;
+        margin-top: 30px;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: white;
+        box-shadow: 0px 1px 8px -1px rgba(0, 0, 0, 0.5);
+    }
+}
+
+#premium-label h1 {
+    color: #cf2424;
+    /* Safari */
+    -webkit-transform: rotate(45deg);
+
+    /* Firefox */
+    -moz-transform: rotate(45deg);
+
+    /* IE */
+    -ms-transform: rotate(45deg);
+
+    /* Opera */
+    -o-transform: rotate(45deg);
+
+    /* Internet Explorer */
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=0.5);
+    
+    float: right;
+    margin-right: -20px;
+    margin-top: -60px;
+    font-weight: 700;
+}
+
+/*=====================*\
+|*     CHOOSE-TIME     *|
+\*=====================*/
+
+@media all and (min-width: 1300px) {
+    #choose-period {
+        float: right;
+        margin-right: 50px;
+        right: 0;
+        width: 600px;
+        position: absolute;
+    }
+}
+
+@media all and (max-width: 1300px) {
+    #choose-period {
+        margin-left: auto;
+        margin-right: auto;
+        width: 600px;
+        position: relative;
+        margin-top: 100px;
+    }
+}
+
+#choose-period h1 {
+    float: right;
+    font-size: 18px;
+    font-weight: 600;
+    margin-right: 55px;
+    margin-top: -35px;
+    color: black;
+    cursor: pointer;
+}
+
+#choose-period h3 {
+    color: grey;
+    font-size: 13px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+#choose-time {
+    background-color: white;
+    box-shadow: 0px 1px 8px -1px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 75px;
+}
+
+#choose-time p {
+    padding-top: 12px;
+    margin-left: 20px;
+    position: relative;
+    width: 50%;
+}
+
+/*=====================*\
+|*     SHOWBENEFITS    *|
+\*=====================*/
+
+#showBenefits {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    display: none;
+}
+
+#img {
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    height: auto;
+    padding: 20px;
+    margin-top: 150px;
+    z-index: 210;
+    position: relative;
+}
+
+#img img {
+    width: 300px;
+    height: auto;
+    padding-bottom: 30px;
+}
+
+#img a {
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    padding: 8px 10px;
+    z-index: 10;
+    color: #fff;
+    border: none;
+    background-color: #cf2424;
+    border-bottom: 3px solid #A0332F;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100px;
+    border-radius: 15px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.membAttendance {
+    width: 380px;
+    height: 100px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-bottom: 1px solid lightgrey;
+}
+
+#memberPb img {
+    height: 48px;
+    width: auto;
+    border-radius: 50%;
+    border: 1px solid white;
+    margin-top: 25px;
+    float: left;
+}
+
+.membAttendance .text {
+    float: left;
+    margin-left: 20px;
+    margin-top: 22px;
+    width: 230px;
+    height: 50px;
+}
+
+.membAttendance button {
+    text-align: left;
+    background-color: #fff;
+    border: none;
+    padding: none;
+    margin: none;
+    width: 220px;
+    height: 30px;
+    overflow-y: auto;
+    word-break: break-all;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.membAttendance p {
+    margin-top: 10px;
+}
+
+.charts {
+    float: right;
+    margin-top: 10px;
+}
+
+#list-singlePlayer-attendance {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 500;
+    position: fixed;
+    display: none;
+}
+
+.single-box {
+    z-index: 1000;
+    top: 100px;
+    position: fixed;
+    background-color: white;
+    overflow-y: auto;
+    overflow-x: hidden;
+    width: 500px;
+    height: 550px;
+    right: calc(50% - 250px);
+    box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 1);
+    border-radius: 3px;
+}
+
+.event-box {
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100px;
+    border-bottom: 1px solid lightgrey;
+}
+
+#list-singlePlayer-attendance h3 {
+    float: left;
+    margin-top: 10px;
+}
+
+#list-singlePlayer-attendance .button {
+    float: right;
+    background-color: #fff;
+    border: none;
+    padding: none;
+    margin: none;
+    width: 120px;
+    height: 30px;
+    overflow-y: auto;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 4px;
+}
+
+.top-box {
+    margin-top: 0;
+    width: 100%;
+    height: 30px;
+}
+
+.comment-boxes {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+}
+
+#list-singlePlayer-attendance h4 {
+    float: left;
+    display: inline;
+    width: 200px;
+    color: black;
+}
+
+#list-singlePlayer-attendance .material-icons {
+    background-color: white;
+    border: none;
+    padding: none;
+    margin: none;
+    float: right;
+    display: inline;
+    margin-right: 37px;
+    cursor: pointer;
+}
+
+
+#list-singlePlayer-attendance .hidden-button {
+    display: none;
+}
+
+#list-singlePlayer-attendance textarea {
+    font-family: 'Open Sans', sans-serif, "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
+    Microsoft Sans Serif;
+    font-weight: 400;
+    font-size: 15px;
+    resize: none;
+    width: 50%;
+    height: 28px;
+    border: 1px solid #d5d5d5;
+    padding-left: 8px;
+    padding-top: 6px;
+    padding-right: 8px;
+}
+
+#list-singlePlayer-attendance p {
+    float: left;
+    width: 200px;
+    color: grey;
+    font-size: 10px;
+    margin-left: 5px;
+    margin-top: 2px;
+}
+
+#event-link {
+    width: 420px;
+}
+
+#event-box {
+    background-color: white;
+    box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 1);
+    margin-top: 50px;
+    height: 70px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+#event-link i {
+    color: #cf2424;
+    font-size: 40px;
+    margin-left: 50px;
+    margin-top: 15px;
+}
+
+#event-link h1 {
+    float: right;
+    font-size: 18px;
+    font-weight: 600;
+    margin-right: 15px;
+    margin-top: 24px;
+    color: black;
+}
+
+#event-link h3 {
+    color: grey;
+    font-size: 13px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+#noPlayers {
+    padding: 20px 0px 20px 0px;
+    font-size: 15px;
+    font-weight: 500;
+    text-align: center;
+}
+
+
+
+ /* Dropdown Button */
+
+#sort-box {
+    margin-top: 50px;
+}
+
+#sort-box p {
+    float: left;
+    margin-top: 3px;
+    margin-left: 20px;
+    font-size: 18px;
+}
+
+#sort-box i {
+    float: left;
+    font-size: 30px;
+    margin-left: 10px;
+}
+
+.dropbtn {
+    background-color: #235789;
+    color: white;
+    padding-left: 16px;
+    padding-right: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 1);
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #2980B9;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 10px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 15px;
+    line-height: 19px;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;} 

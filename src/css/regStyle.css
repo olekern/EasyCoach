@@ -1,0 +1,322 @@
+html {
+    /*
+     background: url(../img/bakgrunn.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  */
+    background-color: #cf2424;
+    height: 100%;
+}
+
+html {
+    font-family: 'Open Sans', sans-serif, "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
+    Microsoft Sans Serif;
+}
+
+@media all and (max-width: 1100px) {
+
+    .imac img {
+        display: none;
+    }
+
+    .logForm {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 120px;
+        background-color: #34495e;
+        height: 26em;
+        width: 25em
+    }
+
+    .innlogging img {
+        width: 8em;
+        height: auto;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20px;
+        margin-bottom: 1.5em;
+        z-index: 20;
+        position: relative;
+    }
+
+    .register {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: -360px;
+        margin-bottom: 1.5em;
+        background-color: #34495e;
+        height: 17em;
+        width: 25em;
+        z-index: 10;
+        position: relative;
+    }
+
+    .registrering {
+        margin-top: 3.6em;
+        margin-left: 3em;
+    }
+
+
+}
+
+@media all and (min-width: 1100px) {
+
+    .imac img {
+        display: block;
+        height: 25em;
+        width: auto;
+        margin-top: 22vh;
+        margin-left: 10em;
+    }
+
+    .logForm {
+        float: right;
+        margin-right: 30vh;
+        margin-top: -21em;
+        background-color: #34495e;
+        height: 22em;
+        width: 25em
+    }
+
+    .innlogging img {
+        width: 8em;
+        height: auto;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: -3em;
+        margin-bottom: 1.5em;
+        z-index: 20;
+        position: relative;
+    }
+
+    .register {
+        float: right;
+        margin-top: -320px;
+        margin-right: -400px;
+        background-color: #34495e;
+        height: 20em;
+        width: 25em;
+        z-index: 10;
+        position: relative;
+    }
+
+    .registrering {
+        margin-top: 3.6em;
+        margin-left: 3em;
+    }
+
+
+
+}
+
+.footer3 {
+    opacity: 0;
+    width: 100%;
+    height: 11vh;
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+    line-height: 5em;
+}
+
+h1,
+h3 {
+    font-size: 20px;
+    font-weight: normal;
+
+}
+
+.newboxes {
+    height: 2em;
+}
+
+#opener {
+    margin-top: 5em;
+}
+
+.innlogging {
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+
+#list-error {
+    color: white;
+    font-size: 13px;
+    text-align: center;
+}
+
+#fullname {
+    text-transform: uppercase;
+}
+
+::-webkit-input-placeholder {
+    /* WebKit browsers */
+    text-transform: none;
+}
+
+:-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    text-transform: none;
+}
+
+::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    text-transform: none;
+}
+
+:-ms-input-placeholder {
+    /* Internet Explorer 10+ */
+    text-transform: none;
+}
+
+.klubb {
+    float: right;
+    margin-right: 16em;
+    margin-top: -21em;
+    background-color: #34495e;
+    height: 20.5em;
+    width: 23.5em;
+    z-index: 15;
+    position: relative;
+
+}
+
+.innlogging input[type="text"] {
+    height: 2.3em;
+    width: 14.3em;
+    font-size: 18px;
+    background-color: #fff;
+    margin-bottom: 1.2em;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 2em;
+}
+
+.innlogging input[type="password"] {
+    height: 2.3em;
+    width: 14.3em;
+    font-size: 18px;
+    background-color: #fff;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 2em;
+}
+
+.registrering input[type="text"],
+.registrering input[type="password"] {
+    height: 2.3em;
+    width: 14.5em;
+    font-size: 18px;
+    background-color: #fff;
+    margin-bottom: 0.8em;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 2em;
+}
+
+
+.form-input::before {
+    content: "\f003";
+    position: absolute;
+    font-family: "FontAwesome";
+    font-size: 25px;
+    padding-top: 11px;
+    padding-left: 7px;
+    color: #222E3C;
+
+}
+
+.pass::before {
+    content: "\f023";
+    position: absolute;
+    font-family: "FontAwesome";
+    font-size: 25px;
+    padding-top: 11px;
+    padding-left: 12px;
+    color: #222E3C;
+}
+
+.name::before {
+    content: "\f007";
+    position: absolute;
+    font-family: "FontAwesome";
+    font-size: 25px;
+    padding-top: 11px;
+    padding-left: 9px;
+    color: #222E3C;
+}
+
+.mail::before {
+    content: "\f003";
+    position: absolute;
+    font-family: "FontAwesome";
+    font-size: 25px;
+    padding-top: 11px;
+    padding-left: 7px;
+    color: #222E3C;
+}
+
+.passord::before {
+    content: "\f023";
+    position: absolute;
+    font-family: "FontAwesome";
+    font-size: 25px;
+    padding-top: 11px;
+    padding-left: 12px;
+    color: #222E3C;
+}
+
+.btn {
+    padding: 12px 25px;
+    color: #fff;
+    border: none;
+    background-color: #2ECC71;
+    border-bottom: 4px solid #27AE60;
+    font-size: 15px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+}
+
+.btn2 {
+    padding: 12px 25px;
+    color: #fff;
+    border: none;
+    background-color: #2ECC71;
+    border-bottom: 4px solid #27AE60;
+    font-size: 15px;
+    display: block;
+    margin-left: 6em;
+    cursor: pointer;
+}
+
+#opener {
+    text-align: center;
+    margin-top: 1em;
+}
+
+#opener a {
+    color: #fff;
+}
+
+#upbutton a {
+    color: white;
+    float: right;
+    margin-right: 1em;
+}
+
+.pass p {
+    margin-top: 7px;
+    margin-bottom: 20px;
+    color: white;
+    font-size: 13px;
+    text-align: center;
+    cursor: pointer;
+}

@@ -1,0 +1,134 @@
+<!doctype html>
+
+<html>
+
+<head>
+    <title>EasyCoach</title>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
+    <meta name="viewport" content="width=device-width" />
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parse/1.11.1/parse.min.js"></script>
+    <link rel="apple-touch-icon" sizes="57x57" href="./favicons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="./favicons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="./favicons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="./favicons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="./favicons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="./favicons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="./favicons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="./favicons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="./favicons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="./favicons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicons/favicon-16x16.png">
+    <link rel="manifest" href="./favicons/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="./favicons/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="apple-mobile-web-app-title" content="EasyCoach">
+    <meta name="application-name" content="EasyCoach">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" type="text/css" href="./src/css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300, 400, 500, 600" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./src/css/paymentConfirmed.css">
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+
+    <script type="text/javascript" src="./src/fullPage.js-master/jquery.fullPage.js"></script>
+
+    <script src="./src/garand-sticky-73b0fbe/jquery.sticky.js"></script>
+
+    <link href="./src/css/multiple-select.css" rel="stylesheet" />
+</head>
+
+<body>
+
+    <div id="nav">
+        <img src="./src/img/new-logo.png" />
+        <a id="name" href="index.html">EasyCoach</a>
+        <a id="app" class="nav-link" onclick="getLink()">Gå til appen</a>
+        <a id="help" class="nav-link" href="./guide.html">Hjelp</a>
+    </div>
+
+    <script>
+        var s = 'file:///C:/Users/h/Desktop/klubbenapp/index.html#secondPage';
+        var r = s.replace(/^(.+?)_[^.]+(\.[^\/.]+)$/i, '$1$2');
+
+    </script>
+
+
+    <script type="text/javascript">
+        Parse.initialize("wSHRpQQxW6jgmxRQV8UXogZcOiRvO8s8VoVmlMYI", "imVCWFzFX4fVRGcqX8ioidD686IPb5ELzHd3WkJw");
+        Parse.serverURL = 'https://klubbenheroku.herokuapp.com/parse';
+
+        function getLink() {
+            var uagent = navigator.userAgent.toLowerCase();
+            if (uagent.search("iphone") > -1) {
+                location.href = "https://itunes.apple.com/no/app/klubben/id1101856959?l=nb&mt=8";
+            } else if (uagent.indexOf("android") > -1) {
+                location.href = "https://play.google.com/store/apps/details?id=com.lustek.klubben";
+            } else {
+
+                var currentuser = Parse.User.current();
+                if (currentuser) {
+                    location.href = "./home.html";
+                } else {
+                    location.href = "./registration.html";
+                }
+            }
+        }
+
+        var id;
+        $(window).resize(function() {
+            clearTimeout(id);
+            id = setTimeout(doneResizing, 500);
+
+        });
+
+        function doneResizing() {
+            var height = $(window).innerWidth();
+            //alert(height);   
+        }
+
+    </script>
+
+
+    <div id="finishedPaying">
+        <h1>Your team was successfully upgraded to Premium. We hope you will enjoy it!</h1>
+        <p>A confirmation e-mail has been sent to you. Give us a message at contact@klubbenapp.com if the premium functions have not been made available to you after this upgrade.</p>
+        <h2>Did you start a trial period?</h2>
+        <p>Remember to cancel the subscription within the next 30 days if you do not want to start the payed Premium year. </p>
+    </div>
+
+
+
+    <script>
+        function English() {
+
+            localStorage.setItem("language", "EN");
+            location.href = "./index.html";
+        }
+
+        function Norwegian() {
+            localStorage.setItem("language", "NO");
+            location.href = "index.html";
+        }
+
+    </script>
+
+    <div id="footer">
+        <p>&copy; 2018 Lustek AS</p>
+        <a onclick="English()">EN</a>
+        <a onclick="Norwegian()">NO</a>
+    </div>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,241 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    background-color: #EDEDED;
+    
+}
+.nav {
+    
+    height: 80px;
+    background: #cf2424;
+    width: 100%;
+   
+}
+
+.nav img{
+    height: 50px;
+    width: auto;
+    float: left;
+    margin-left: 100px;
+    margin-top: 17px;
+}
+.nav ul {
+    margin:0;
+    padding:0;
+    overflow: hidden;
+    margin-right: 40px;
+}
+.nav ul li {
+    list-style:none;
+}
+
+
+.nav ul li a {
+    text-decoration: none;
+    float: right;
+    display: block;
+    padding: 32px 25px;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+
+.nav ul li a:hover {
+    color: lightgrey;
+}
+
+.navn{
+    text-decoration: none;
+    float: left;
+    display: block;
+    padding: 26px;
+    margin-left: 50px;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 25px;
+    letter-spacing: 1px;
+    
+}
+
+#signOut{
+    font-size: 23px;
+    margin-top: -2px;
+}
+
+#chart1 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 85em;
+    height: 20em;
+    
+}
+#chart2 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 85em;
+    height: 20em;
+}
+#chart3 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 85em;
+    height: 20em;
+}
+#chart4 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 85em;
+    height: 20em;
+}
+#chart5 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 85em;
+    height: 20em;
+}
+#chart6 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 85em;
+    height: 20em;
+}
+.ct-labels span {
+    color: black;
+}
+
+h1 {
+    font-size: 25px;
+    font-family: Microsoft Sans Serif, Verdana;
+    font-weight: lighter;
+    text-align: center;
+}
+h2 {
+    font-size: 20px;
+    font-family: Microsoft Sans Serif, Verdana;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 3em;
+}
+.newboxes {
+    border: 0 solid;
+    display: block;
+}
+.rapporter {
+    height: 2em;
+    background: #c94832;
+    width: 21em;
+    margin-left: auto;
+    margin-right: auto;
+}
+.rapporter ul {
+    padding:0;
+}
+.rapporter ul li {
+    list-style:none;
+}
+.rapporter ul li a {
+    text-decoration: none;
+    display: block;
+    padding: 0.5em 3em;
+    color: white;
+    width: 1em;
+    float: left;
+    margin-left: auto;
+    margin-right: auto;
+}
+.rapporter ul li a:hover {
+    background-color:#e05038;
+    height: 1em;
+}
+#feedBack {
+    background-color: white;
+    width: 25em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3em;
+    padding: 50px;
+    border: 1px solid #d5d5d5;
+}
+
+#feedBack a{
+    display: block;
+    font-weight: 500;
+    font-size: 20px;
+    margin-left: 5em;
+    margin-top: -2.7em;
+    margin-bottom: 2.7em;
+}
+
+
+#feedBack a:first-letter{
+    text-transform: uppercase;
+}
+
+#profilBilde img{
+    width: 5em;
+    height: auto;
+}
+
+
+#playerLink{
+    margin-top: 0.5em;
+}
+
+
+#playerLink ul li {
+    list-style: none;
+}
+
+
+#playerLink ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+#playerLink ul li a:hover {
+    text-decoration: underline;
+}
+
+#playerLink li:first-letter{
+    text-transform: uppercase;
+}
+
+#list-links{
+    margin-left: -0.5em;
+}
+
+#links{
+    width: 15em;
+    position: fixed;
+    margin-top: 5em;
+    margin-left: 7em;
+    border: 0;
+    background-color: white;
+    border: 1px solid #d5d5d5;
+}
+
+#links h3{
+    margin-left: 4em;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.spiller::before{
+    content: "\f0c0";
+    position: absolute;
+    font-family: "FontAwesome";
+    font-size: 25px;
+    color: #222E3C;
+    margin-left: 1em;
+    margin-top: -0.1em;
+    
+}

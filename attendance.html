@@ -1,0 +1,169 @@
+<!doctype html>
+<!-- Treningsapp -->
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parse/1.11.1/parse.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="./src/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="./src/css/attendanceStyle.css" />
+    <link rel="stylesheet" type="text/css" href="./src/css/app.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>EasyCoach</title>
+    <link rel="icon" type="image/png" href="./src/img/blackfavicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="./src/img/blackfavicon-16x16.png" sizes="16x16" />
+    <link href="./src/css/multiple-select.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300, 400, 500, 600" rel="stylesheet">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.19.1/locale/nb.js"></script>
+
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.0/themes/smoothness/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-6125588383347359",
+            enable_page_level_ads: true
+        });
+
+    </script>
+
+</head>
+
+<body>
+
+    <script type="text/javascript" src="./src/ericjgagnon-wickedpicker-5080539/src/wickedpicker.js"></script>
+    <link rel="stylesheet" href="./src/ericjgagnon-wickedpicker-5080539/stylesheets/wickedpicker.css">
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+    <script>
+        var language = localStorage.getItem("language");
+
+    </script>
+
+    <script>
+        $(function() {
+            $(".datepicker").datepicker();
+        });
+
+    </script>
+
+    <div id="list-sm"></div>>
+
+    <div class="wrapper">
+        <div class="doubleWrap">
+            <div id="piechart">
+                <img src="./src/loading/Preloader_8.gif" id="loader">
+            </div>
+            <div id="choose-period">
+                <div id="choose-time">
+                    <p id="from-pick"></p>
+                    <p id="to-pick"></p>
+                    <h1 onclick="setDates()" id="update-stats"></h1>
+                </div>
+                <h3 id="date-explanation"></h3>
+            </div>
+            <div id="single-event">
+                <div id="event-link">
+                    <div id="event-box">
+                        <a href="events.html">
+                        <i href="attendance.html" class="material-icons">event_available</i>
+                        <h1 id="goTo"></h1>
+                    </a>
+                    </div>
+                    <h3 id="link-explanation"></h3>
+                </div>
+            </div>
+            <div id="download-box" class="noAction"></div>
+            <div id="sort-box" style="display: none">
+                <div class="dropdown">
+                    <button onclick="myFunction()" class="dropbtn"></button>
+                    <div id="myDropdown" class="dropdown-content">
+                        <a id="alphabetically" onclick="sortAnswers(id)"></a>
+                        <a id="ascending-attendance" onclick="sortAnswers(id)"></a>
+                        <a id="descending-attendance" onclick="sortAnswers(id)"></a>
+                    </div>
+                </div>
+            </div>
+            <div id="list-player-attendance"></div>
+
+        </div>
+    </div>
+    <div id="list-singlePlayer-attendance"></div>
+
+    <div id="showBenefits"></div>
+
+    <script type="text/javascript" src="./src/js/nav.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore.js"></script>
+    <script type="text/javascript" src="./src/js/multiple-select.js"></script>
+    <script type="text/javascript" src="./src/js/getteam.js"></script>
+    <script type="text/javascript" src="./src/js/usersession.js"></script>
+    <script type="text/javascript" src="./src/js/roles.js"></script>
+    <script type="text/javascript" src="./src/js/pb.js"></script>
+    <script type="text/javascript" src="./src/js/attendance.js"></script>
+    <script type="text/javascript" src="./src/js/csv.js"></script>
+
+    <script>
+        var specificEvent;
+        var explanation;
+        var csvText;
+        var from;
+        var to;
+        var updateStats;
+        var dateExplanation;
+        var sort;
+        var alphabet;
+        var ascending;
+        var descending;
+        if (language == "NO") {
+            specificEvent = "Gå til side for enkeltarrangement";
+            explanation = "Se svar for enkelte arrangement, slett eller rediger arrangement";
+            csvText = "Last ned svarene som en CSV-fil";
+            from = "Fra";
+            to = "Til";
+            updateStats = "Oppdater statistikken";
+            dateExplanation = "Velg en fra/til-dato hvis du ønsker å vise statistikk for en spesiell periode";
+            sort = "Sorter";
+            alphabet = "Alfabetisk";
+            ascending = "Etter flest deltatt";
+            descending = "Etter færrest deltatt";
+        } else {
+            specificEvent = "Go to page for single events";
+            explanation = "See answers for single events, delete or edit an event";
+            csvText = "Download the answers as a CSV-file";
+            from = "From";
+            to = "To";
+            updateStats = "Update the statistics";
+            dateExplanation = "Choose a from/to-date if you would like to display stats for a particular period";
+            sort = "Sort";
+            alphabet = "Alphabetically";
+            ascending = "Ascending attendance";
+            descending = "Descending attendance";
+        }
+
+        $('#goTo').html(specificEvent);
+        $('#link-explanation').html(explanation);
+        $('#download-csv').html(csvText);
+
+
+        $('#from-pick').html(from + ': <input type="text" autocomplete="off" id="from-date" class="datepicker">');
+        $('#to-pick').html(to + ': <input type="text" autocomplete="off" id="to-date" class="datepicker">');
+
+        $('#update-stats').html(updateStats);
+        $('#date-explanation').html(dateExplanation);
+
+
+        $('.dropbtn').html('<i class="material-icons" onclick="myFunction()">sort</i><p onclick="myFunction()">' + sort + '</p>');
+        $('#alphabetically').html(alphabet);
+        $('#ascending-attendance').html(ascending);
+        $('#descending-attendance').html(descending);
+
+    </script>
+
+</body>

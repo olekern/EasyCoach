@@ -1,0 +1,204 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+    
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+html{
+    background-color: #EDEDED;
+    overflow-x: hidden;
+    font-family: 'Open Sans', sans-serif, "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", 
+  Microsoft Sans Serif;
+}
+
+#dvLoading
+	{
+	   background-color: #cf2424;
+	   height: 100%;
+	   width: 100%;
+	   position: fixed;
+	   z-index: 1000;
+        top: 0;
+        bottom: 0;
+	}
+
+.nav {
+    height: 79px;
+    top: 0;
+    background: #cf2424;
+    width: 100%;
+    position: fixed;
+    z-index: 990;
+    border-bottom: 1px solid #b62929;
+    box-shadow: 0px 1px 8px -1px rgba(0, 0, 0, 1); 
+}
+
+#logo{
+    height: 75px;
+    width: auto;
+    float: left;
+    margin-left: 37px;
+    margin-top: 5px;
+}
+.nav ul {
+    margin:0;
+    padding:0;
+    overflow: hidden;
+    margin-right: 40px;
+}
+.nav ul li {
+    list-style:none;
+}
+
+
+#signOut {
+    text-decoration: none;
+    float: right;
+    display: block;
+    padding: 32px 25px;
+    color: white;
+}
+
+#signOut a{
+font-size: 80px;
+}
+
+#signOut:hover {
+    color: lightgrey;
+}
+
+.navn{
+    text-decoration: none;
+    float: right;
+    display: block;
+    padding: 30px;
+    color: white;
+    font-weight: 300;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+.navn:hover {
+    color: lightgrey;
+}
+
+#profile-pb {
+    height: 48px;
+    width: 48px;
+    border-radius: 32px;
+    overflow: hidden;
+    border: 1px solid white;
+    margin-top: 18px; 
+    float: right;
+}
+
+#profile-pb img{
+    height: 48px;
+    width: auto;
+}
+
+#signOut{
+    font-size: 23px;
+    margin-top: -2px;
+}
+
+#side-menu{
+    float: left;
+    height: calc(100% - 79px);
+    width: 150px;
+    z-index: 50;
+    position: fixed;
+    background-color: #343434;
+    color: white;
+    box-shadow: 0px 1px 8px -1px rgba(0, 0, 0, 0.5); 
+    top: 79px;
+}
+
+.wrapper {
+    position: relative;
+    float: right;
+    top: 79px;
+    width: calc(100% - 150px);
+}
+
+#top{
+    width: 150px;
+    text-align: center;
+}
+
+#top a{
+    font-size: 30px;
+    display: block;
+    line-height: 30px;
+    color: white;
+    text-decoration: none; 
+}
+
+#top p{
+    font-size: 17px;
+    color: white;
+    line-height: 30px;
+    text-decoration: none;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", 
+  Microsoft Sans Serif;
+}
+
+#btm{
+    width: 150px;
+    color: white;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 8px;
+    font-weight: 300;
+    text-align: center;
+    font-size: 12px;
+}
+
+#btm .language{
+    float: left;
+    display: inline;
+    width: 50%;
+    margin-bottom: 10px;
+    cursor: pointer;
+    text-decoration: underline;
+}

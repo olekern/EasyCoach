@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="./src/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="./src/css/createstyle.css" />
+    <link rel="stylesheet" type="text/css" href="./src/css/app.css" />
+    <title>EasyCoach | Create survey</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300, 400, 500, 600" rel="stylesheet">
+    <link rel="icon" type="image/png" href="./src/img/blackfavicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="./src/img/blackfavicon-16x16.png" sizes="16x16" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parse/1.11.1/parse.min.js"></script>
+
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.0/themes/smoothness/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+</head>
+
+<body>
+
+    <script type="text/javascript" src="./src/ericjgagnon-wickedpicker-5080539/src/wickedpicker.js"></script>
+    <link rel="stylesheet" href="./src/ericjgagnon-wickedpicker-5080539/stylesheets/wickedpicker.css">
+
+
+    <script>
+        var language = localStorage.getItem("language");
+
+    </script>
+
+    <div id="dvLoading"></div>
+
+    <script>
+        $(window).load(function() {
+            $('#dvLoading').fadeOut(2000);
+        });
+
+    </script>
+
+    <script>
+        $(function() {
+            $(".datepicker").datepicker();
+        });
+
+    </script>
+
+
+    <div id="list-sm"></div>>
+    <script type="text/javascript" src="./src/js/nav.js"></script>
+
+    <div class="wrapper">
+        <div id="create-reports">
+            <div id="create-doc">
+                <div id="topRightBtn">
+
+                    <button id="' + number +'" class="deleteAll" onclick="deleteAll()"></button>
+                    <button id="' + number +'" class="submit" onclick="sendForm()"></button>
+                </div>
+                <h2 id="create-survey"></h2>
+                <textarea rows="1" cols="30" name="text" id="title" placeholder=""></textarea>
+                <div class="date-switch">
+                    <h3 id="single"></h3>
+                    <label class="switch">
+                          <input onclick="chooseTime()" id="check" autocomplete="off" type="checkbox">
+                          <div class="slider round"></div>
+                        </label>
+                    <h3 id="plural"></h3>
+                </div>
+                <p id="date-pick"><input type="text" autocomplete="off" id="form-date" class="datepicker"></p>
+                <div id="days" style="display: none;">
+                    <p class="day" id="monday"></p>
+                    <p class="day" id="tuesday"></p>
+                    <p class="day" id="wednesday"></p>
+                    <p class="day" id="thursday"></p>
+                    <p class="day" id="friday"></p>
+                    <p class="day" id="saturday"></p>
+                    <p class="day" id="sunday"></p>
+                </div>
+                <ul id="list-create-doc">
+
+                </ul>
+                <div id="addQuestBtn" onclick="createQuest()">
+                    <i class="material-icons">add_circle</i>
+                    <p id="addQuestion"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        
+        var deleteAll;
+        var submit;
+        var createSurvey;
+        var oneTimeEvent;
+        var repeatingEvent;
+        var surveyTitle;
+        var addQuestion;
+        var date;
+        
+        var mon;
+        var tue;
+        var wed;
+        var thu;
+        var fri;
+        var sat;
+        var sun;
+        if (language == "NO") {
+            
+            deleteAll = "Slett alt";
+            submit = "Fullfør";
+            createSurvey = "Opprett undersøkelse";
+            oneTimeEvent = "Enkeltundersøkelse";
+            repeatingEvent = "Gjentagende undersøkelse";
+            surveyTitle = "Tittel på undersøkelse";
+            addQuestion = "Legg til spørsmål";
+            date = "Dato"
+            
+            mon = "Man";
+            tue = "Tir";
+            wed = "Ons";
+            thu = "Tor";
+            fri = "Fre";
+            sat = "Lør";
+            sun = "Søn";
+        } else {
+            
+            deleteAll = "Delete all";
+            submit = "Submit";
+            createSurvey = "Create survey";
+            oneTimeEvent = "One time event";
+            repeatingEvent = "Repeated event";
+            surveyTitle = "Survey title";
+            addQuestion = "Add question";
+            date = "Date";
+            
+            mon = "Mon";
+            tue = "Tue";
+            wed = "Wed";
+            thu = "Thu";
+            fri = "Fri";
+            sat = "Sat";
+            sun = "Sun";
+        }
+        
+        $('.deleteAll').html(deleteAll);
+        $('.submit').html(submit);
+        $('#create-survey').html(createSurvey);
+        $('#single').html(oneTimeEvent);
+        $('#plural').html(repeatingEvent);
+        $('#addQuestion').html(addQuestion);
+        $('#date-pick').append(date + ':');
+        
+        $('#title').attr('placeholder', surveyTitle);
+
+        $('#monday').append(mon + '<input class="day-checkbox" id="mon" type="checkbox">');
+        $('#tuesday').append(tue + '<input class="day-checkbox" id="tue" type="checkbox">');
+        $('#wednesday').append(wed + '<input class="day-checkbox" id="wed" type="checkbox">');
+        $('#thursday').append(thu + '<input class="day-checkbox" id="thu" type="checkbox">');
+        $('#friday').append(fri + '<input class="day-checkbox" id="fri" type="checkbox">');
+        $('#saturday').append(sat + '<input class="day-checkbox" id="sat" type="checkbox">');
+        $('#sunday').append(sun + '<input class="day-checkbox" id="sun" type="checkbox">');
+
+    </script>
+
+    <script type="text/javascript" src="./src/js/getteam.js"></script>
+    <script type="text/javascript" src="./src/js/pb.js"></script>
+    <script type="text/javascript" src="./src/js/onlycoach.js"></script>
+
+    <script src="./src/js/create.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,343 @@
+html{
+    height: auto;
+    padding-bottom: 200px;
+}
+
+.square{
+    padding-top: 14px;
+    padding-bottom: 9px;
+}
+
+.box{
+    width: 7px;
+    height: 83px;
+    top: 0;
+    margin-top: -14px;
+    background-color: #cf2424;
+    float: left;
+    border-right: 1px solid #484848;
+}
+
+#calBox, #survBox, #forBox, #teamBox, #dashBox, #attendBox{
+    display: none;
+}
+#calendar:hover{
+    background-color: #5c5c5c;
+    border-top: 1px solid #484848;
+    margin-top: -1px;
+}
+
+#calendar:hover #calBox{
+    display: block;
+}
+
+#calendar:hover a{
+    margin-right: 8px;
+}
+
+#dashbord:hover{
+    background-color: #5c5c5c;
+}
+
+#dashbord:hover #dashBox{
+    display: block;
+}
+
+#dashbord:hover a{
+    margin-right: 8px;
+}
+
+#attendance:hover{
+    background-color: #5c5c5c;
+}
+
+#attendance:hover #attendBox{
+    display: block;
+}
+
+#attendance:hover a{
+    margin-right: 8px;
+}
+
+#survey:hover{
+    background-color: #5c5c5c;
+    border-top: 1px solid #484848;
+    margin-top: -1px;
+}
+#survey:hover #survBox{
+    display: block;
+}
+
+#survey:hover a{
+    margin-right: 8px;
+}
+#forberedelser:hover{
+    background-color: #5c5c5c;
+    border-top: 1px solid #484848;
+}
+#forberedelser:hover #forBox{
+    display: block;
+}
+
+#forberedelser:hover a{
+    margin-right: 7px;
+}
+
+#team:hover{
+    background-color: #5c5c5c;
+    border-top: 1px solid #484848;
+    margin-top: -1px;
+}
+#team:hover #teamBox{
+    display: block;
+}
+
+#team:hover a{
+    margin-right: 8px;
+}
+
+#btm{
+    width: 150px;
+    color: white;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 8px;
+    font-weight: 300;
+    text-align: center;
+    font-size: 12px;
+}
+
+.doubleWrap{
+    margin-left: 50px;
+}
+
+svg[aria-label="A chart."] > g > g:last-child { pointer-events: none } 
+
+@media all and (min-width: 1400px){
+#draw-chart{
+    float: right;
+    margin-right: 50px;
+    margin-top: -60px;
+    box-shadow: 0px 1px 8px -1px rgba(0, 0, 0, 0.5);
+}
+}
+
+@media all and (max-width: 1400px){
+#draw-chart{
+    left: 0;
+    margin-left: 70px;
+    width: 600px;
+    margin-top: 30px;
+    box-shadow: 0px 1px 8px -1px rgba(0, 0, 0, 0.5);
+}
+}
+
+#list-date-pick{
+    width: 190px;
+    margin-left: 70px;
+    margin-top: 75px;
+    background-color: white;
+    padding: 15px 15px 15px 15px;
+    box-shadow: 0px 1px 8px -1px rgba(0, 0, 0, 0.5);
+    border-radius: 3px;
+}
+
+#list-date-pick h2{
+    color: black;
+    font-size: 14px;
+    margin-top: 5px;
+    text-align: center;
+}
+
+#list-events{
+    margin-top: 50px;
+    margin-left: 70px;
+    background-color: white;
+    width: 400px;
+    padding: 20px 20px 20px 20px;
+    box-shadow: 0px 1px 8px -1px rgba(0, 0, 0, 0.5);
+    border-radius: 3px;
+}
+
+#noEvent h2{
+    font-weight: 600;
+}
+
+#event h2{
+    font-weight: 600;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+#event h3{
+    margin-top: 5px;
+    font-size: 15px;
+}
+
+#button button{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    background-color: white;
+    border: none;
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 500;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+#event i{
+    cursor: pointer;
+}
+
+.editdelete{
+    float: right;
+    margin-top: -10px;
+}
+
+.editdelete i{
+    margin-bottom: 10px;
+}
+
+.editor{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.editor h1{
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.editor button{
+    margin-top: 20px;
+    padding: 6px 8px;
+    z-index: 10;
+    color: #fff;
+    border: none;
+    background-color: #D94842;
+    border-bottom: 3px solid #A0332F;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100px;
+    border-radius: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.editor p{
+    font-size: 15px;
+    font-weight: 500;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+#newName{
+    font-family: 'Open Sans', sans-serif, "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", 
+  Microsoft Sans Serif;
+    font-weight: 400;
+    font-size: 15px;
+    resize: none;
+    width: 160px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 24px;
+    border: 1px solid #d5d5d5;
+    padding-left: 8px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-right: 8px;
+    text-align: center;
+}
+
+.athlete {
+    border-bottom: 1px solid black;
+    padding-bottom: 20px;
+    padding-top: 0;
+    margin-top: -30px;
+}
+
+.athlete img {
+    margin-top: 10px;
+    height: 50px;
+    width: auto;
+    float: left;
+    margin-left: 20px;
+    padding-right: 60px;
+}
+
+
+.athlete h1 {
+    font-weight: 600;
+    font-size: 18px;
+    margin-top: 50px;
+    
+}
+
+.athlete select {
+    margin-top: 10px;
+}
+
+.athlete .comment-section {
+    width: 180px;
+    position: relative;
+    margin-top: 10px;
+    margin-left: 130px;
+}
+
+.comment-section i {
+    float: right;
+    margin-top: -20px;
+}
+
+
+.enter {
+    font-size: 12px;
+    color: grey;
+}
+
+/*=====================*\
+|*      DELETEBOX      *|
+\*=====================*/
+
+#confirmKick{
+    height: 100px;
+    width: 270px;
+    padding: 20px;
+    background-color: white;
+    position: fixed;
+    z-index: 30;
+    top: 0;
+    left: 0;
+    margin-top: 200px;
+    margin-left: 200px;
+    box-shadow: 0px 1px 8px -1px rgba(0, 0, 0, 1);
+    text-align: center;
+    border-radius: 5px;
+}
+
+#confirmKick p{
+    font-size: 20px;
+}
+
+#confirmKick button{
+    margin-top: 20px;
+    padding: 6px 8px;
+    z-index: 10;
+    color: #fff;
+    border: none;
+    background-color: #D94842;
+    border-bottom: 3px solid #A0332F;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100px;
+    border-radius: 15px;
+    margin-left: 5px;
+    margin-right: 5px;
+}

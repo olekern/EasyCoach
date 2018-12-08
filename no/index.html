@@ -1,0 +1,496 @@
+<!doctype html>
+
+<html>
+
+<head>
+    <title>EasyCoach App For Idrettslag</title>
+    <meta name="description" description="EasyCoach tilbyr registrering av oppmøte, undersøkelser for utøverne og mulighet for en god og enkel kommunikasjon innad i laget. ">
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
+    <meta name="viewport" content="width=device-width" />
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parse/1.11.1/parse.min.js"></script>
+    <link rel="apple-touch-icon" sizes="57x57" href="../favicons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../favicons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../favicons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../favicons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../favicons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../favicons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="../favicons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../favicons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../favicons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="../favicons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../favicons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicons/favicon-16x16.png">
+    <link rel="manifest" href="../favicons/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="../favicons/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="apple-mobile-web-app-title" content="EasyCoach App For Idrettslag, Med Registrering Av Oppmøte, Undersøkelser og Enkel Kommunikasjon">
+    <meta name="application-name" content="EasyCoach">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" type="text/css" href="../src/css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300, 400, 500, 600" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../src/css/index.css">
+
+    <link rel="alternate" href="https://easycoach-app.com/" hreflang="en" />
+    <link rel="alternate" href="https://easycoach-app.com/no/index" hreflang="no" />
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+
+    <script type="text/javascript" src="../src/fullPage.js-master/jquery.fullPage.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+
+
+            $('#phoneshell1').addClass('hide');
+            $('#phoneshell2').addClass('hide');
+            $('#phoneshell3').addClass('hide');
+
+            $('#fullpage').fullpage({
+                sectionsColor: ['white', '#04151f', 'white', '#183a37', '#3e78b2', 'white'],
+                anchors: ['1', '2', '3', '4', '5', '6'],
+                menu: '#menu',
+                scrollingSpeed: 1000,
+                responsiveWidth: 600,
+                afterLoad: function(anchorLink, index) {
+
+                    if (index == 1) {
+                        $('#emptyphone1').addClass('minimize');
+                    }
+                    if (index == 2) {
+                        $('#emptyphone2').removeClass('hide');
+                        $('#emptyphone3').addClass('hide');
+                        $('#emptyphone4').addClass('hide');
+
+
+                        $('#phoneshell1').removeClass('hide');
+                        $('#phoneshell2').addClass('hide');
+                        $('#phoneshell3').addClass('hide');
+
+                        $('#emptyphone1').removeClass('minimize');
+
+                    } else if (index == 3) {
+
+                        $('#emptyphone2').addClass('hide');
+                        $('#emptyphone3').removeClass('hide');
+                        $('#emptyphone4').addClass('hide');
+
+
+                        $('#phoneshell1').addClass('hide');
+                        $('#phoneshell2').removeClass('hide');
+                        $('#phoneshell3').addClass('hide');
+
+                        $('#emptyphone1').removeClass('minimize');
+
+                    }
+
+                    if (index == 4) {
+
+                        $('#emptyphone2').addClass('hide');
+                        $('#emptyphone3').addClass('hide');
+                        $('#emptyphone4').removeClass('hide');
+
+                        $('#phoneshell1').addClass('hide');
+                        $('#phoneshell2').addClass('hide');
+                        $('#phoneshell3').removeClass('hide');
+
+                        $('#emptyphone1').removeClass('minimize');
+                    }
+
+                    if (index == 5) {
+
+                        $('#emptyphone2').addClass('hide');
+                        $('#emptyphone3').removeClass('hide');
+
+                        $('#phoneshell1').addClass('hide');
+                        $('#phoneshell2').addClass('hide');
+                        $('#phoneshell3').addClass('hide');
+
+                        $('#emptyphone1').addClass('minimize');
+
+                    }
+
+                    if (index == 6) {
+                        $('#emptyphone1').addClass('minimize');
+                    }
+
+
+                },
+                onLeave: function(nextIndex, direction) {
+
+
+                    if (direction == 1) {
+                        $('#phoneshell1').addClass('hide');
+                    }
+                    if (direction == 2) {
+                        $('#emptyphone3').addClass('hide');
+                    }
+                    if (direction == 3) {
+
+                        $('#emptyphone2').addClass('hide');
+                        $('#emptyphone4').addClass('hide');
+
+                    }
+                    if (direction == 4) {
+                        $('#emptyphone3').addClass('hide');
+
+                    }
+
+                    if (direction == 5) {
+
+                        $('#phoneshell1').addClass('hide');
+                        $('#phoneshell2').addClass('hide');
+                        $('#phoneshell3').addClass('hide');
+
+                        $("#list-form").html('');
+                    }
+
+                }
+            });
+
+            //}
+        });
+
+        var id;
+        $(window).resize(function() {
+            clearTimeout(id);
+            id = setTimeout(doneResizing, 500);
+
+        });
+
+        function doneResizing() {
+            var height = $(window).innerHeight();
+            //alert(height);   
+        }
+
+    </script>
+
+    <script src="../src/garand-sticky-73b0fbe/jquery.sticky.js"></script>
+</head>
+
+<body>
+
+    <script>
+        if (localStorage.getItem("language")) {
+            var language = localStorage.getItem("language");
+
+            if (language == "EN") {
+                location.href = "../index.html";
+            }
+
+        } else {
+
+            var language = "NO";
+        }
+
+    </script>
+
+
+    <div id="nav">
+        <img src="../src/img/new-logo.png" />
+        <a id="name" href="index.html">EasyCoach</a>
+        <a id="app" onclick="getLink()">Gå til appen</a>
+        <a id="help" href="../guide.html">Hjelp</a>
+    </div>
+
+    <script>
+        var s = 'file:///C:/Users/h/Desktop/klubbenapp/index.html#secondPage';
+        var r = s.replace(/^(.+?)_[^.]+(\.[^\/.]+)$/i, '$1$2');
+
+    </script>
+
+
+    <script type="text/javascript">
+        Parse.initialize("wSHRpQQxW6jgmxRQV8UXogZcOiRvO8s8VoVmlMYI", "imVCWFzFX4fVRGcqX8ioidD686IPb5ELzHd3WkJw");
+        Parse.serverURL = 'https://klubbenheroku.herokuapp.com/parse';
+
+        function getLink() {
+            var uagent = navigator.userAgent.toLowerCase();
+            if (uagent.search("iphone") > -1) {
+                location.href = "https://itunes.apple.com/no/app/klubben/id1101856959?l=nb&mt=8";
+            } else if (uagent.indexOf("android") > -1) {
+                location.href = "https://play.google.com/store/apps/details?id=com.lustek.klubben";
+            } else {
+
+                var currentuser = Parse.User.current();
+                if (currentuser) {
+                    location.href = "../home.html";
+                } else {
+                    location.href = "../registration.html";
+                }
+            }
+        }
+
+    </script>
+
+
+    <div id="emptyphone1">
+        <img src="../src/img/AttendanceStatistics-no.png" id="phoneshell1">
+        <img src="../src/img/Survey.png" id="phoneshell2">
+        <img src="../src/img/News%20Feed.png" id="phoneshell3">
+
+    </div>
+
+
+    <div id="fullpage">
+        <div class="section" id="section0">
+            <div class="section-box">
+                <div class="content">
+                    <div id="top-content">
+                        <h1 id="klubben">Løft laget ditt til nye høyder!</h1>
+                        <h2>EasyCoach er en app for idrettslag som tilbyr oppmøtestatistikk, spillerundersøkelser og en enkel kommunikasjon innad i laget.</h2>
+                        <div id="firstStores">
+                            <a href="https://itunes.apple.com/no/app/klubben/id1101856959?l=nb&mt=8"> <img src="../src/img/Get_AppStore_Black.png" /> </a>
+                            <a href="https://play.google.com/store/apps/details?id=com.lustek.klubben"> <img src="../src/img/Get_GooglePlay_Black.png" /> </a>
+                        </div>
+                        <a id="regnt" href="index.html#6">Registrer nytt lag</a>
+                        <div id="arrow">
+                            <a class="bounce" href="index.html#2"><i class="material-icons">keyboard_arrow_down</i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section" id="section1">
+            <div class="section-box">
+                <div class="content">
+                    <div id="emptyphone2">
+                        <img src="../src/img/AttendanceStatistics-no.png" id="calendarImg">
+                    </div>
+                    <div class="smallscreen">
+                        <div class="normalphone">
+                            <img src="../src/img/AttendanceStatistics-no.png" class="phoneshell">
+                        </div>
+                        <div class="smalltext" id="smallCalendar">
+                            <h2>Enkel oversikt</h2>
+                            <h1>Registrer oppmøte og få statistikk for ditt lag</h1>
+                            <p>Både trenere og utøvere kan registrere oppmøte, noe som gir deg som trener oversikt både før og etter øktene.</p>
+                        </div>
+                    </div>
+                    <div class="infobox" id="infobox1">
+                        <h2>Enkel oversikt</h2>
+                        <h1>Registrer oppmøte og få statistikk for ditt lag</h1>
+                        <p>Både trenere og utøvere kan registrere oppmøte, noe som gir deg som trener oversikt både før og etter øktene.</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="section" id="section2">
+            <div class="section-box">
+                <div class="content">
+                    <div id="emptyphone3">
+                        <img src="../src/img/Survey.png" id="surveyImg">
+                    </div>
+                    <div class="smallscreen">
+                        <div class="normalphone">
+                            <img src="../src/img/Survey.png" class="phoneshell">
+                        </div>
+                        <div class="smalltext" id="smallSurvey">
+                            <h2>Raske undersøkelser</h2>
+                            <h1>Forbedre oppfølgingen mellom utøver og trener</h1>
+                            <p>Mange trenere føler at tiden på treningsfeltet ikke strekker til. Lag undersøkelser til dine utøvere og oppretthold en tett og god dialog gjennom EasyCoach. </p>
+                        </div>
+                    </div>
+                    <img src="../src/img/sport1.png" id="sportscompilation">
+                    <div class="infobox2">
+                        <h2>Raske undersøkelser</h2>
+                        <h1>Forbedre oppfølgingen mellom utøver og trener</h1>
+                        <p>Mange trenere føler at tiden på treningsfeltet ikke strekker til. Lag undersøkelser til dine utøvere og oppretthold en tett og god dialog gjennom EasyCoach. </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section" id="section3">
+            <div class="section-box">
+                <div class="content">
+                    <div id="emptyphone4">
+                        <img src="../src/img/News%20Feed.png" id="feedImg">
+                    </div>
+                    <div class="smallscreen">
+                        <div class="normalphone">
+                            <img src="../src/img/News%20Feed.png" class="phoneshell">
+                        </div>
+                        <div class="smalltext" id="smallFeed">
+                            <h2>Oversiktlig kommunikasjon</h2>
+                            <h1>Gi beskjeder til hele laget</h1>
+                            <p>I nyhetsfeeden blir informasjonen raskt tilgjengelig for både utøvere og trenere. Slipp lange mailinglister og knotete smslogger.</p>
+                        </div>
+                    </div>
+                    <div class="infobox" id="infobox3">
+                        <h2>Oversiktlig kommunikasjon</h2>
+                        <h1>Gi beskjeder til hele laget</h1>
+                        <p>I nyhetsfeeden blir informasjonen raskt tilgjengelig for både utøvere og trenere. Slipp lange mailinglister og knotete smslogger.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section" id="section4">
+            <div class="section-box">
+                <div class="content">
+                    <div id="pricing">
+
+                        <div class="columns">
+                            <ul class="price">
+                                <li class="header">Basic-lag</li>
+                                <li class="grey">Gratis</li>
+                                <li>Nyhetsfeed</li>
+                                <li>Oppmøtestatistikk</li>
+                                <li>Flere trenere per lag</li>
+                                <li>Grupper</li>
+                                <li>Maks 25 medlemmer</li>
+                                <li class="grey"><a href="#6" class="button">Registrer lag</a></li>
+                            </ul>
+                        </div>
+                        <div class="columns">
+                            <ul class="price">
+                                <li class="header">Premium-lag</li>
+                                <li class="grey">35 €/år</li>
+                                <li>All funksjonalitet fra Basic-lag</li>
+                                <li>Send egne push-varslinger</li>
+                                <li>Ubegrenset antall medlemmer</li>
+                                <li>Spillerstatistikk</li>
+                                <li>Opprett undersøkelser</li>
+                                <li class="grey"><a href="../payments.html" class="button">Oppgrader ditt lag</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section" id="section5">
+            <div class="section-box">
+                <div class="content">
+                    <div id="seventh">
+                        <div id="seventh-header">
+                            <div><i class="fa fa-envelope-o"></i>
+                                <h3>contact@klubbenapp.com</h3>
+                            </div>
+                            <div>
+                                <a href="https://www.facebook.com/klubbenapp/" class="fa fa-facebook"></a>
+                                <a href="https://www.youtube.com/channel/UCGCVwyMl7CeAreC3Osupsdg" class="fa fa-youtube-play"></a>
+                            </div>
+                        </div>
+                        <div id="seventh-form">
+                            <h1>Registrer ett lag, helt gratis</h1>
+                            <div id="list-log">
+                            </div>
+
+                            <div class="left">
+                                <h3>Registrer ditt nye lag</h3>
+                                <form name="regteam" id="elements">
+                                    <input type="text" name="teamName" placeholder="Lagnavn" />
+                                </form>
+                            </div>
+                        </div>
+
+
+                        <div id="seventh-register">
+                            <div class="left">
+                                <input id="terms" name="terms" type="checkbox" />
+                                <h4 id="termh">Jeg har lest og godtatt <a href="terms.html">vilk&aringrene for EasyCoach</a></h4>
+                            </div>
+                            <div class="right">
+                                <button id="reg" onclick="getInfo()">Registrer</button>
+                                <img src="./src/loading/Preloader_8.gif">
+                            </div>
+                        </div>
+                        <!--
+                        <div id="seventh-stores">
+                            <a href="https://itunes.apple.com/no/app/klubben/id1101856959?l=nb&mt=8"> <img src="./src/img/Get_AppStore_Black.png" /> </a>
+                            <a href="https://play.google.com/store/apps/details?id=com.lustek.klubben"> <img src="./src/img/Get_GooglePlay_Black.png" /> </a>
+                        </div>
+-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="list-form"></div>
+    <div id="background" style="display: none"></div>
+
+    <script>
+        function English() {
+
+            localStorage.setItem("language", "EN");
+            location.href = "./index.html";
+        }
+
+        function Norwegian() {
+            localStorage.setItem("language", "NO");
+            location.href = "index.html";
+        }
+
+    </script>
+
+    <div id="footer">
+        <p>&copy; 2018 Lustek AS</p>
+        <a onclick="English()">EN</a>
+        <a onclick="Norwegian()">NO</a>
+    </div>
+
+
+    <script type="text/javascript" src="../src/js/regtrainer.js"></script>
+
+    <script type="text/javascript">
+        var monthNames = [
+            "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
+        ];
+        var daysOfTheWeek = ["Thu", "Fri", "Sat", "Sun", "Mon", "Tue", "Wed"];
+        var date = new Date();
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var daysIndex = date.getMonth();
+        var year = date.getFullYear();
+        if (day < 10) {
+            var idag = monthNames[monthIndex] + " " + "0" + day + " " + year;
+        } else {
+            var idag = monthNames[monthIndex] + " " + day + " " + year;
+        }
+        var future = new Date();
+        future.setDate(future.getDate() + 30);
+        var day2 = future.getDate();
+        var monthIndex2 = future.getMonth();
+        var daysIndex2 = future.getMonth();
+        var year2 = future.getFullYear();
+        if (day < 10) {
+            var future30 = monthNames[monthIndex2] + " " + "0" + day2 + " " + year2;
+        } else {
+            var future30 = monthNames[monthIndex2] + " " + day2 + " " + year2;
+        }
+
+        var august = "Jan 31 2018"
+
+        var node = document.getElementById('subscriptionDate');
+        var newNode2 = document.createElement('h4');
+        newNode2.appendChild(document.createTextNode(idag + ' - '));
+        var newNode = document.createElement('h4');
+        newNode2.appendChild(document.createTextNode(august));
+        node.appendChild(newNode);
+        node.appendChild(newNode2);
+
+
+        $(document).click(function(event) {
+            if (!$(event.target).closest('.nohide').length) {
+                if ($('.nohide').is(":visible")) {
+
+                    $("#list-form").html('');
+
+                    document.getElementById('background').style.display = "none";
+                }
+            }
+        });
+
+    </script>
+
+</body>
+
+</html>

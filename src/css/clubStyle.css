@@ -1,0 +1,358 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+html{
+  background-color: #cf2424;
+  font-family: Microsoft Sans Serif;
+  font-weight: lighter;
+}
+
+#container{
+    width: 90vw;
+    height: 90vh;
+    position: absolute;
+    margin-top: 5vh;
+    margin-left: 5vw;
+}
+
+.imac{
+    z-index: 1;
+    position: relative;
+    margin-top: 3vh;
+    margin-left: -2vw;
+}
+
+@media all and (min-width: 1000px) {
+    
+    html{
+        height: 100%;
+        overflow: hidden;
+    }
+
+.imac img{
+    width: 50vw;
+    height: auto;
+}
+    
+    .right{
+     width: 50%;
+    float: right;
+    height: 100%;
+}
+    
+    .right-box{
+        width: 400px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin-right: 8vw;
+        margin-top: 3vh;
+        z-index: 1;
+    }
+    
+.code{
+     height: 145px;
+     width: 400px;
+    background-color: #34495e;
+    margin-bottom: 15px;
+
+}
+    
+.code h3{
+    color: white;
+    text-align: center;
+    padding-top: 25px;
+    }
+    
+    .code #password{
+        border-radius: 5px;
+        font-size: 15px;
+        border: 1px solid grey;
+        margin-top: 22px;
+        width: 180px;
+        height: 20px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .code button{
+        background-color: #34495e;
+        color: white;
+        width: 50x;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 15px;
+        border: none;
+        font-size: 15px;
+        cursor: pointer;
+    }
+
+.right p{
+
+   color: white;
+   font-size: 23px;
+   font-weight: 500;
+   text-align: center;
+}
+    
+.klubb{
+    background-color: #34495e;
+    height: 400px;
+    width: 400px;
+    z-index: 15;
+    overflow: auto;
+    margin-top: 15px;
+}
+
+h1, h3{
+    font-size: 20px;
+    font-family:  Helvetica Neue, Trebuchet MS, Verdana;
+    font-weight: normal;
+}
+    
+.klubbValg h3{
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 5vh;
+}
+
+.lagVelg{
+    width: 340px;
+    height: 54px;
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom: 1px solid white;
+}
+    
+#box1{
+    float: left;
+}
+#box2{
+    overflow: hidden;
+}
+
+.lagVelg button{
+    padding: 4px 3px;
+    margin-top: 10px;
+    color: #fff;
+    border: none;
+    background-color: #2ECC71;
+    border-bottom: 4px solid #27AE60;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.lagVelg h4{
+    color: white;
+    width: 200px;
+    margin-top: 14px;
+}
+
+.klubbFor{
+    width: 8em;
+    height: auto;
+    float: right;
+    display: block;
+    margin-right: 24em;
+    margin-top: -24em;
+    margin-bottom: 1.5em;
+    z-index: 25;
+    position: relative;
+}
+    
+    #orange button{
+        padding: 4px 3px;
+        margin-top: 10px;
+        color: #fff;
+        border: none;
+        background-color: #fcb946;
+        border-bottom: 4px solid #fca207;
+        font-size: 12px;
+        cursor: pointer;
+    }
+    
+    }
+
+@media all and (max-width: 1000px) {
+   .imac img{
+    display: none;
+}
+    
+    .right{
+     width: 100%;
+    height: 100%;
+}
+    
+    .code{
+     height: 145px;
+     width: 400px;
+    background-color: #34495e;
+    margin-bottom: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+    
+.code h3{
+    color: white;
+    text-align: center;
+    padding-top: 25px;
+    }
+    
+    .code #password{
+        border-radius: 5px;
+        font-size: 15px;
+        border: 1px solid grey;
+        margin-top: 22px;
+        width: 180px;
+        height: 20px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .code button{
+        background-color: #34495e;
+        color: white;
+        width: 50x;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 15px;
+        border: none;
+        font-size: 15px;
+        cursor: pointer;
+    }
+    
+    .right p{
+
+   color: white;
+   font-size: 23px;
+   font-weight: 500;
+   text-align: center;
+}
+    
+    .klubb{
+    background-color: #34495e;
+    height: 400px;
+    width: 400px;
+    z-index: 15;
+    overflow: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+}
+
+h1, h3{
+    font-size: 20px;
+    font-family:  Helvetica Neue, Trebuchet MS, Verdana;
+    font-weight: normal;
+    
+}
+
+.klubbValg h3{
+    color: white;
+    text-align: center;
+    margin-top: 3vh;
+    margin-bottom: 5vh;
+}
+
+.lagVelg{
+    width: 340px;
+    height: 54px;
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom: 1px solid white;
+}
+    
+#box1{
+    float: left;
+}
+#box2{
+    overflow: hidden;
+}
+
+.lagVelg button{
+    padding: 4px 3px;
+    margin-top: 10px;
+    color: #fff;
+    border: none;
+    background-color: #2ECC71;
+    border-bottom: 4px solid #27AE60;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.lagVelg h4{
+    color: white;
+    width: 200px;
+    margin-top: 14px;
+}
+
+.klubbFor{
+    width: 8em;
+    height: auto;
+    float: right;
+    display: block;
+    margin-right: 24em;
+    margin-top: -24em;
+    margin-bottom: 1.5em;
+    z-index: 25;
+    position: relative;
+}
+    
+    #orange button{
+        padding: 4px 3px;
+        margin-top: 10px;
+        color: #fff;
+        border: none;
+        background-color: #fcb946;
+        border-bottom: 4px solid #fca207;
+        font-size: 12px;
+        cursor: pointer;
+    }
+    
+}

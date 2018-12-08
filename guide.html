@@ -1,0 +1,158 @@
+<!doctype html>
+
+<html>
+
+<head>
+    <title>EasyCoach | Guide To EasyCoach, Get Started Quicker With These Tutorials</title>
+    <meta name="description" description="Use these quick tutorials to understand more of EasyCoach and take advantage of all the great features of the app.">
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
+    <meta name="viewport" content="width=device-width" />
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parse/1.11.1/parse.min.js"></script>
+    <link rel="apple-touch-icon" sizes="57x57" href="./favicons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="./favicons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="./favicons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="./favicons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="./favicons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="./favicons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="./favicons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="./favicons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="./favicons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="./favicons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicons/favicon-16x16.png">
+    <link rel="manifest" href="./favicons/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="./favicons/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="apple-mobile-web-app-title" content="EasyCoach">
+    <meta name="application-name" content="EasyCoach">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300, 400, 500, 600" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./src/css/guide.css">
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+
+
+    <script src="./src/garand-sticky-73b0fbe/jquery.sticky.js"></script>
+</head>
+
+<body>
+
+    <script>
+        /*
+                                        if (localStorage.getItem("language")) {
+                                            var language = localStorage.getItem("language");
+
+                                            if (language == "EN") {
+                                                location.href = "./index.html";
+                                            }
+
+                                        } else {
+
+                                            var language = "NO";
+                                        }
+                                */
+
+    </script>
+
+
+    <div id="nav">
+        <img src="./src/img/new-logo.png">
+        <a id="name" href="index.html">EasyCoach</a>
+        <a id="app" onclick="getLink()">Go to the app</a>
+        <a id="help" href="guide.html">Help</a>
+    </div>
+
+    <script>
+        var s = 'file:///C:/Users/h/Desktop/klubbenapp/index.html#secondPage';
+        var r = s.replace(/^(.+?)_[^.]+(\.[^\/.]+)$/i, '$1$2');
+
+    </script>
+
+
+    <script type="text/javascript">
+        Parse.initialize("wSHRpQQxW6jgmxRQV8UXogZcOiRvO8s8VoVmlMYI", "imVCWFzFX4fVRGcqX8ioidD686IPb5ELzHd3WkJw");
+        Parse.serverURL = 'https://klubbenheroku.herokuapp.com/parse';
+
+        function getLink() {
+            var uagent = navigator.userAgent.toLowerCase();
+            if (uagent.search("iphone") > -1) {
+                location.href = "https://itunes.apple.com/no/app/klubben/id1101856959?l=nb&mt=8";
+            } else if (uagent.indexOf("android") > -1) {
+                location.href = "https://play.google.com/store/apps/details?id=com.lustek.klubben";
+            } else {
+
+                var currentuser = Parse.User.current();
+                if (currentuser) {
+                    location.href = "./home.html";
+                } else {
+                    location.href = "./registration.html";
+                }
+            }
+        }
+
+    </script>
+
+    <div id="center-content">
+        <div id="explanation" class="content-box">
+            <h1>EasyCoach Support</h1>
+            <div id="error">
+                <h3></h3>
+                <div class="error">
+                    <h4></h4>
+                    <p></p>
+                </div>
+            </div>
+        </div>
+        <div id="getting-started" class="content-box">
+            <h2>Getting started</h2>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/jRs4VipFn5Y" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+        </div>
+        <div id="groups" class="content-box">
+            <h2>Groups within a team</h2>
+            <p>Not every user needs to see every post. By creating groups within the team, the coach can target specific types of users when posting in the news feed. Perhaps you want to give a message to the other coaches? Or maybe give some feedback to your defenders, commenting their performance last match?</p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/DJgEjf60JFE" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+        </div>
+        <div id="events" class="content-box">
+            <h2>Events</h2>
+            <p>Creating events is a brilliant way of getting attendance statistics for your team. It can be a one-time event or sessions that are being automatically created every week, just as you want it. Let the athletes report if they are coming to the session, or fill it in by yourself. Either way it will show up in the statistics page.</p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/3iGhXyF-98o" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+        </div>
+
+        <div id="contact-information" class="content-box">
+            <h2>Contact information</h2>
+            <p>Did you not find what you were looking for? Or maybe you have any suggestions for improvements of EasyCoach? Anyways, we are happy to hear from you. Send an email to contact@klubbenapp.com to get in touch.</p>
+        </div>
+    </div>
+
+
+
+    <script>
+        function English() {
+
+            localStorage.setItem("language", "EN");
+            location.href = "./guide.html";
+        }
+
+        function Norwegian() {
+            localStorage.setItem("language", "NO");
+            location.href = "guide.html";
+        }
+
+    </script>
+
+    <div id="footer">
+        <p>&copy; 2018 Lustek AS</p>
+    </div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,82 @@
+<!doctype html>
+<!-- Treningsapp -->
+<html>
+
+<head>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/parse/1.11.1/parse.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="./src/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="./src/css/calendarStyle.css" />
+    <link rel="stylesheet" type "text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.4.0/fullcalendar.min.css" />
+    <link rel="stylesheet" type="text/css" href="./src/css/app.css" />
+    <title>EasyCoach | Calendar</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chartist/0.11.0/chartist.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Arimo" rel="stylesheet">
+    <link rel="icon" type="image/png" href="./src/img/blackfavicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="./src/img/blackfavicon-16x16.png" sizes="16x16" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300, 400, 500, 600" rel="stylesheet">
+
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-6125588383347359",
+            enable_page_level_ads: true
+        });
+
+    </script>
+</head>
+
+
+<body>
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+    <div id="dvLoading"></div>
+
+    <script>
+        var language = localStorage.getItem("language");
+
+    </script>
+
+
+    <script>
+        $(window).load(function() {
+            $('#dvLoading').fadeOut(2000);
+        });
+
+    </script>
+
+    <div id="list-sm"></div>
+    <script type="text/javascript" src="./src/js/nav.js"></script>
+
+
+    <script type="text/javascript" src="./src/js/getteam.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.4.0/fullcalendar.min.js"></script>
+    <script type="text/javascript" src="./src/js/multiple-select.js"></script>
+    <script type="text/javascript" src="./src/js/pb.js"></script>
+    <script type="text/javascript" src="./src/js/usersession.js"></script>
+    <script type="text/javascript" src="./src/js/roles.js"></script>
+    <script type="text/javascript" src="./src/js/calendar.js"></script>
+    <script type="text/javascript" src="./src/js/onlycoach.js"></script>
+
+    <div class="wrapper">
+        <div id='list-calendar'></div>
+        <div id="listing"></div>
+    </div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,961 @@
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+html{
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", "Microsoft Sans Serif";
+    width: 100%;
+}
+
+#dvLoading{
+   background:#000 url(images/loader.gif) no-repeat center center;
+   height: 100%;
+   width: 100%;
+   position: fixed;
+   z-index: 1000;
+}
+
+
+/*=====================*\
+|*       SHARED        *|
+\*=====================*/
+
+h1{
+    font-size: 35px;
+    font-weight: 400;
+    text-align: center;
+}
+
+h2 {
+    font-size: 30px;
+    font-weight: 400;
+    text-align: center;
+}
+
+h3 {
+    font-size: 25px;
+    font-weight: 400;
+    text-align: center;
+}
+
+h4 {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+p {
+    font-weight: 400;
+}
+
+.left {
+    width: 50%;
+    height: 100%;
+    float: left;
+}
+
+.center {
+    width: 33%;
+    height: 100%;
+    float: left;
+}
+
+
+.right {
+    width: 50%;
+    height: 100%;
+    float: right;
+}
+
+
+
+
+/*=====================*\
+|*     NAVIGATION      *|
+\*=====================*/
+
+	
+#nav {
+    width: 100%;
+    height: 80px;
+    background-color: #cf2424;
+    z-index: 25;
+    position: fixed;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    top: 0;
+}
+
+#nav img{
+    height: 50px;
+    width: auto;
+    float: left;
+    margin-left: 5%;
+    margin-top: 17px;
+}
+
+#nav a {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+#name{
+    float: left;
+    margin-left: 5%;
+    font-size: 25px;
+    margin-top: 27px;
+}
+
+#app {
+    float: right;
+    margin-right: 4%;
+    font-size: 18px;
+    margin-top: 33px;
+}
+
+#nav a:hover {
+    color: lightgrey;
+}
+
+
+/*=====================*\
+|*        FIRST        *|
+\*=====================*/
+
+
+
+#first {
+    color: white;
+    margin-top: 80px;
+    width: 100%;
+    background-color: #cf2424;
+    clear: left;
+}
+
+#firstInfo {
+    vertical-align: middle;
+}
+
+#firstStores {
+    height: 100px;
+}
+
+
+#firstStores img {
+    width: 40%;
+    height: auto;
+    margin: 5%;
+    float: left;
+}
+
+#firstInfo h3 {
+    margin-top: 20px;
+    font-weight: 300;
+}
+
+@media all and (min-width: 650px) {
+    
+    #first {
+        height: 570px;
+    }
+    
+    #firstShowcase {
+        width: auto;
+        height: 500px;
+        margin: 35px;
+        margin-right: 20%;
+        float: right;
+    }
+    
+    #firstInfo {
+        max-width: 400px;
+        margin: 60px 20px 0px 20px;
+    }
+    
+    #firstStores {
+        max-width: 460px;
+        margin-top: 50px;
+    }
+    
+    #firstRegister{
+        max-width: 400px;
+        text-align: center;
+        margin: 30px 13px 0px 27px;
+    }
+    
+    #firstRegister a{
+        text-decoration: none;
+        color: white;
+        padding: 10px 10px;
+        border: 1px solid white;
+        font-size: 20px;
+    }
+    
+    #firstRegister a:hover{
+        color: lightgrey;
+        border: 1px solid lightgrey;
+    }
+
+}
+
+@media all and (max-width: 650px) {
+    
+    #first {
+        height: 430px;
+    }
+    
+    #firstShowcase, #first .left  {
+        width: 0%;
+    }
+    
+    #first .right {
+        width: 100%;
+    }
+    
+    #firstInfo {
+        max-width: 400px;
+        margin: 20px auto;
+    }
+
+    #firstStores {
+        width: calc(100%-40px);
+        margin: 20px;
+    }
+    
+    #firstRegister{
+        width: calc(100%-40px);
+        text-align: center;
+        margin-top: 5vw;
+    }
+    
+    #firstRegister a{
+        text-decoration: none;
+        color: white;
+        padding: 10px 10px;
+        border: 1px solid white;
+        font-size: 20px;
+    }
+    
+    #firstRegister a:hover{
+        color: lightgrey;
+        border: 1px solid lightgrey;
+    }
+    
+}
+
+
+/*=====================*\
+|*       SECOND        *|
+\*=====================*/
+
+
+#second iframe {
+    width: 80%;
+    max-width: 600px;
+    height: 320px;
+    margin: 30px;
+}
+
+@media all and (min-width: 800px) {
+    #second {
+        height: 380px;
+    }
+    
+    #second h3 {
+        float: right;
+        margin: 100px 50px;
+        max-width: 350px;
+        font-weight: 300;
+        line-height: 27px;
+    }
+}
+
+@media all and (max-width: 800px) {
+    #second {
+        display: table;
+        text-align: center;
+    }
+    
+    #second .left {
+        width: 100%;
+        height: 45%;
+        margin: 0px;
+    }
+    
+    #second .right {
+        width: 100%;
+        height: 30%;
+    }
+    
+    #second * {
+        width: calc(100%-20px);
+        display: inline-block;
+        margin: 0 auto;
+    }
+    
+    #second h3 {
+        margin: 20px 20px 0px 20px;
+        max-width: 400px;
+        font-weight: 300;
+    }
+}
+
+
+
+
+/*=====================*\
+|*        THIRD        *|
+\*=====================*/
+
+
+#third{
+    width: 100%;
+    background-color: #3f88c5;
+    color: white;
+    padding: 50px 0px;
+}
+
+#third div {
+    display: table;
+    margin: 0px auto 0px auto;
+}
+
+#third h4{
+    float: right;
+    margin: 10px 25px 10px 0px;
+    font-weight: 300;
+}
+
+
+@media all and (min-width: 750px) {
+    #third h3 {
+	width: 450px;
+	margin-left: auto;
+	margin-right: auto;
+        text-align: center
+        font-weight: 200;
+        line-height: 27px;
+        letter-spacing: 1px;
+    }
+    
+    #third img{
+        margin: 0px 25px 0px 25px;
+        float: left;
+    }
+    
+    #third div {
+        width: 700px;
+    }
+}
+
+@media all and (max-width: 750px) {
+    
+    #third h3 {
+        margin: 12px 10% 0px 10%;
+        font-weight: 200;
+        line-height: 27px;
+        letter-spacing: 1px;
+    }
+    
+    
+    #third * {
+        display: table;
+    }
+    
+    #third img{
+        margin: 0px auto 0px auto;
+    }
+}
+
+
+
+
+/*=====================*\
+|*       FOURTH        *|
+\*=====================*/
+
+#fourth .left {
+    width: 40%;
+}
+
+#fourth .right {
+    width: 60%;
+}
+
+#fourth {
+    background-color: #eafdf8;
+}
+
+#fourthOne .right * {
+    text-align: left;
+    margin-top: 15px;
+}
+
+#fourth > div {
+    width: 100%;
+    display: table;
+
+}
+
+#fourth img {
+    height: 500px;
+    width: auto;
+}
+
+#fourthTwo h1{
+    font-weight: 400;
+}
+
+#fourthOne h4{
+    font-weight: 200;
+    font-size: 24px;
+}
+
+#fourthOne h1{
+    font-weight: 300;
+    font-size: 37px;
+    line-height: 45px;
+}
+
+#fourthOne h3{
+    font-weight: 200;
+    font-size: 25px;
+    line-height: 30px;
+}
+
+
+@media all and (min-width: 1200px) {
+    #fourthTwo h1 {
+        margin-top: 200px;
+        text-align: right;
+    }
+}
+
+@media all and (max-width: 1200px) {
+    #fourthTwo .left {
+        width: 100%;
+    }
+    #fourthTwo h1 {
+        margin: 10px 10px 50px 10px;
+        
+    }
+    #fourthTwo .right {
+        width: 100%;
+        
+    }
+    
+    #fourthTwo {
+        display: table;
+    }
+    
+    #fourthTwo img {
+        width: 90%;
+        height: auto;
+        margin: 0px 5%;
+    }
+}
+
+
+@media all and (min-width: 750px) {
+    #fourthOne .left * {
+        float: right;
+    }
+    
+    #fourth .right div {
+        float: left;
+        max-width: 400px;
+        margin-left: 80px;
+        margin-top: 100px;
+    }
+    
+}
+
+@media all and (max-width: 750px) {
+    #fourthOne .left {
+        width: 100%;
+    }
+    
+    #fourthOne img {
+        width: 300px;
+        height: auto;
+        margin: 10px calc(50% - 150px);
+    }
+    
+    #fourthOne .right {
+        float: left;
+        margin: 0px;
+        width: 100%;
+    }
+    
+   #fourth .right div {
+       width: 300px;
+       margin: 0px auto 10px;
+    }
+    
+    #fourth .right div * {
+        text-align: center;
+    }
+    
+}
+
+
+/*=====================*\
+|*        Fifth        *|
+\*=====================*/
+
+#fifth {
+    width: 100%;
+    display: table;
+    background-color: #d0e3cc;
+}
+
+#fifth .left img {
+    height: 500px;
+    width: auto;
+    float: right;
+    margin: 30px;
+}
+
+#fifth-img {
+    font-size: 60px;
+    margin: 120px 30px 30px 40px;
+    line-height: 90px;
+    display: table;
+    clear: both;
+}
+
+#fifth-img div {
+    clear: both;
+}
+
+#fift-img i {
+    margin-top: 10px;
+}
+
+
+@media all and (min-width: 950px) {
+   #fifth .left {
+        width: 40%;
+    }
+
+    #fifth .right {
+        width: 60%;
+    }
+    
+    #fifth h2 {
+        text-align: left;
+        margin: -15px 0px 30px 50px;
+    }
+    
+    #fifth-img * {
+         float: left;
+    }
+}
+
+@media all and (max-width: 950px) {
+    #fifth .left {
+        width: 100%;
+        text-align: center;
+    }
+    
+    #fifth .left img {
+        float: none;
+    }
+    
+    #fifth .right {
+        width: 100%;
+        float: none;
+    }
+    
+    #fifth-img h2 {
+        clear: both;
+    }
+    
+    #fifth-img {
+        margin: 0 auto;
+    }
+    
+    #fifth-img i {
+        margin: 0 auto;
+        display: table;
+
+    }
+    
+}
+
+/*=====================*\
+|*        SIXTH        *|
+\*=====================*/
+
+#sixth {
+    color: white;
+    height: 450px;
+    width: 100%;
+}
+
+#sixth .left {
+    width: 50%;
+    height: 350px;
+    background-color: #cf2424;
+    border-right: 1px solid white;
+    padding-left: 10%;
+    padding-top: 100px;
+}
+
+#sixth .left * {
+    text-align: left;
+    position: relative;
+}
+
+#sixth .right {
+    width: calc(40% - 1px);
+    height: 100%;
+    background-color: #3f88c5;
+}
+
+#sixth a {
+    padding: 7px 12px;
+    border: 1px solid white;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    top: 40px;
+  
+}
+
+#sixth h2{
+    font-weight: 100;
+    font-size: 25px;
+    line-height: 40px;
+    margin-top: 10px;
+}
+
+#sixth h1{
+    font-weight: 300;
+    font-size: 35px;
+    line-height: 40px;
+    margin-top: 10px;
+    width: 300px;
+}
+
+@media all and (max-width: 750px) {
+    #sixth .right {
+        width: 0%;
+    }
+    
+    #sixth .left {
+        width: 100%;
+        padding-left: 0%;
+    }
+    
+    #sixth .left * {
+        text-align: center;
+        margin: 0 auto;
+        display: table;
+    }
+}
+
+
+/*=====================*\
+|*       SEVENTH       *|
+\*=====================*/
+
+#seventh {
+    display: table;
+    margin: 0 auto;
+    width: 90%;
+    max-width: 1000px;
+}
+
+#seventh-header {
+    width: 100%;
+    display: table;
+    border-bottom: 1px solid grey;
+}
+
+#seventh-header div * {
+    float: left;
+    margin: 30px 0px 15px 10px;
+}
+
+#seventh-header i {
+    font-size: 50px;
+}
+
+#seventh-header h3 {
+    margin: 42px 0px 0px 20px;
+}
+
+#seventh-header a {
+    font-size: 50px;
+    text-decoration: none;
+    color: black;
+    float: right;
+    margin: 30px 15px 0px 15px;
+}
+
+#seventh-form {
+    display: table;
+    width: 100%;
+}
+
+#seventh-form h1 {
+    margin-top: 50px;
+    color: #D94842;
+}
+
+#seventh-form h5 {
+    text-decoration: underline;
+    font-size: 18px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+#seventh-form h5:hover{
+    cursor: pointer;
+}
+
+
+#seventh-form button{
+    font-size: 18px;
+    height: 50px;
+    width: 100px;
+    background-color: #D94842;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-bottom: 3px solid #A0332F;
+    border-radius: 5px;
+    box-shadow: 0px 1px 8px -1px rgba(0, 0, 0, 0.5); 
+    z-index: 10;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#seventh-form #log-form input {
+    height: 50px;
+    width: 250px;
+    font-size: 18px;
+    margin: 15px auto;
+    padding-left: 10px;
+    border: 1px solid grey;
+    border-radius: 4px;
+    display: block;
+}
+
+#seventh-form #log-form{
+    height: 320px;
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#seventh-form #log-form h4{
+    margin-top: 15px;
+    text-decoration: underline;
+    width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+#seventh-form #log-form h4:hover{
+    cursor: pointer;
+}
+
+#seventh-form .form{
+    height: 320px;
+    width: 300px;
+    background-color: white;
+}
+
+#seventh-form #form-input{
+    position: absolute;
+    z-index: 10;
+    margin-top: 0px;
+}
+
+#seventh-form #create-coach{
+    position: relative;
+    z-index: 1;
+}
+
+#seventh-form .left input {
+    height: 50px;
+    width: 80%;
+    font-size: 18px;
+    margin: 15px auto;
+    padding-left: 10px;
+    border: 1px solid grey;
+    border-radius: 4px;
+    display: block;
+}
+
+#seventh-form div {
+    margin-top: 30px;
+}
+
+#seventh-info {
+    display: table;
+    width: 100%;
+    margin: 30px 0px;
+}
+
+#seventh-info .left {
+    width: 40%;
+    text-align: left;
+}
+
+#seventh-info .center {
+    width: 30%;
+}
+
+#seventh-info .center * {
+    text-align: center;
+    color: #D94842;
+}
+
+#seventh-info .right {
+    width: 30%;
+    text-align: right;
+}
+
+#seventh-info .right * {
+    float: right;
+}
+
+#seventh-register {
+    display: table;
+    width: 100%;
+    padding-bottom: 40px;
+    border-bottom: 1px solid grey;
+}
+#seventh-register input {
+    float: left;
+    margin: 5px;
+}
+#seventh-register h4 {
+    float: left;
+}
+
+#seventh-register .right{
+    height: 50px;
+    width: 100px;
+    
+}
+
+#seventh-register button {
+    font-size: 18px;
+    height: 50px;
+    width: 100px;
+    background-color: #D94842;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-bottom: 3px solid #A0332F;
+    border-radius: 5px;
+    box-shadow: 0px 1px 8px -1px rgba(0, 0, 0, 0.5); 
+    z-index: 10;
+    position: absolute;
+}
+
+#seventh-register img{
+    height: 50px;
+    width: auto;
+    position: relative;
+}
+
+#seventh-stores {
+    display: table;
+    margin: 0 auto;
+    width: 50%;
+    min-width: 320px;
+}
+
+#seventh-stores img {
+    width: 40%;
+    height: auto;
+    margin: 5%;
+    float: left;
+}
+
+@media all and (max-width: 600px) {
+    #seventh-header div {
+        width: 100%;
+        text-align: center;
+    }
+    
+    #seventh-header h3 {
+        margin: 0px;
+    }
+    
+    #seventh-header div * {
+        float: none;
+        margin-bottom: 10px;
+    }
+    
+    #seventh-form div {
+        width: 100%;
+    }
+}
+
+/*=====================*\
+|*       FOOTER        *|
+\*=====================*/
+
+#footer {
+    color:white;
+    background-color: #040916;
+    height: 40px;
+    padding-top: 20px;
+}
+
+#footer * {
+    text-align: center;
+}
+

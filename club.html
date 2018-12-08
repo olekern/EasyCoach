@@ -1,0 +1,95 @@
+<!doctype html>
+<!-- Registrering -->
+<html>
+<head>
+    <meta charset="utf-8">
+
+    <title>EasyCoach | Choose team</title>
+    <meta name="description" content="My Parse App">
+    <meta name="viewport" content="width=device-width">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parse/1.11.1/parse.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="./src/css/clubStyle.css" />
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./font-awesome-4.6.3/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Arimo" rel="stylesheet"> 
+    <link rel="icon" type="image/png" href="./src/img/blackfavicon-32x32.png" sizes="32x32" />
+        <link rel="icon" type="image/png" href="./src/img/blackfavicon-16x16.png" sizes="16x16" />
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300, 400, 500, 600" rel="stylesheet"> 
+    
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+</head>
+
+<body>
+    
+    <script>
+        var language = localStorage.getItem("language");
+        
+    </script>
+    
+    <div id="container">
+        <div class="imac">
+            <img src="./src/img/imac.png">
+        </div>
+        <div class="right">
+            <div class="right-box">
+
+                <div class="code">
+                    <h3 id="h3Code"></h3>
+                    <input type="text" name="password" id="password" onkeydown = "if (event.keyCode == 13)
+                        document.getElementById('submitCode').click()"/>
+                    <button id="submitCode" onclick="submitCode()"></button>
+                </div>
+                
+                <p id="pOr"></p>
+                <div class="klubb" id="benefits1">
+                    <img class="klubbFor" src="./src/img/ball.png">
+                    <div class="klubbValg">
+                         <h3 id="h3Choose"></h3>
+                        <div class="posts">
+                            <ul id="list-posts">
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        
+        var password;
+        var writeHere;
+        var submit;
+        var or;
+        var chooseTeam;
+        
+        if(language == "NO"){
+            password = "Fått et passord av treneren din?"
+            writeHere = "Skriv det her";
+            submit = "Bli med";
+            or = "Eller";
+            chooseTeam = "Velg lag";
+        }else{
+            password = "Got a team password?"
+            writeHere = "Write it here";
+            submit = "Join team";
+            or = "Or";
+            chooseTeam = "Choose a team";
+        }
+        
+        $("#h3Code").html(password);
+        $('#password').attr('placeholder', writeHere + '!');
+        $("#submitCode").html(submit);
+        $("#pOr").html(or + ':');
+        $("#h3Choose").html(chooseTeam + ':');
+    </script>
+
+    <script src="./src/js/club.js"></script>
+
+</body>
+
+</html>

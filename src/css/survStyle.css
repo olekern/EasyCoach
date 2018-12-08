@@ -1,0 +1,233 @@
+html{
+    height: 500%;
+}
+
+.square{
+    padding-top: 14px;
+    padding-bottom: 9px;
+}
+
+#evaluering{
+    background-color: #5c5c5c;
+    border-top: 1px solid #484848;
+}
+
+#evaluering a{
+    margin-right: 7px;
+}
+.box{
+    width: 7px;
+    height: 83px;
+    top: 0;
+    margin-top: -14px;
+    background-color: #cf2424;
+    float: left;
+    border-right: 1px solid #484848;
+}
+
+#dashBox, #repBox, #forBox{
+    display: none;
+}
+#dashbord:hover{
+    background-color: #5c5c5c;
+}
+
+#dashbord:hover #dashBox{
+    display: block;
+}
+
+#dashbord:hover a{
+    margin-right: 7px;
+}
+
+#rapporter:hover{
+    background-color: #5c5c5c;
+}
+#rapporter:hover #repBox{
+    display: block;
+}
+
+#rapporter:hover a{
+    margin-right: 7px;
+}
+#forberedelser:hover{
+    background-color: #5c5c5c;
+    border-top: 1px solid #484848;
+}
+#forberedelser:hover #forBox{
+    display: block;
+}
+
+#forberedelser:hover a{
+    margin-right: 7px;
+}
+
+#btm{
+    width: 150px;
+    color: white;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 15px;
+    font-weight: 300;
+    text-align: center;
+    font-size: 12px;
+}
+
+.wrapper {
+    position: relative;
+    float: right;
+    top: 79px;
+    width: calc(100% - 150px);
+}
+
+.newboxes {
+    border: 0 solid;
+    display: block;
+}
+.rapporter {
+    height: 2em;
+    background: #c94832;
+    width: 21em;
+    margin-left: auto;
+    margin-right: auto;
+}
+.rapporter ul {
+    padding:0;
+}
+.rapporter ul li {
+    list-style:none;
+}
+.rapporter ul li a {
+    text-decoration: none;
+    display: block;
+    padding: 0.5em 3em;
+    color: white;
+    width: 1em;
+    float: left;
+    margin-left: auto;
+    margin-right: auto;
+}
+.rapporter ul li a:hover {
+    background-color:#e05038;
+    height: 1em;
+}
+
+.stat{
+    margin-top: 30px;
+}
+
+#surv{
+    border-top: 1px solid #d5d5d5;
+    border-bottom: 1px solid #d5d5d5;
+    width: 25%;
+    margin-left: 3%;
+    background-color: white;
+    max-width: 400px;
+    min-width: 200px;
+    padding: 10px;
+    border: 1px solid #d5d5d5;
+    z-index: 10;
+}
+
+#list-surv h3{
+    line-height: 27px;
+    font-weight: 400;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#list-surv h3:hover{
+    text-decoration: underline;
+}
+
+#answer{
+    top: 0;
+    position: absolute;
+    z-index: 1;
+    background-color: white;
+    width: 65%;
+    max-width: 900px;
+    min-width: 700px;
+    margin-left: 32%;
+    margin-top: 30px;
+}
+
+.all-answers{
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#feedBack {
+    width: 400px;
+    margin-top: 5px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    word-wrap: break-word;
+    border-bottom: 1px solid black;
+    color: black;
+    margin-left: auto;
+    margin-right: auto;
+    margin-right: auto;
+}
+
+#feedback p{
+    line-height: 40px;
+}
+
+textarea{
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", 
+  Microsoft Sans Serif;
+    font-weight: 400;
+    font-size: 15px;
+    overflow: auto;
+    resize: none;
+    margin-top: 30px;
+    border: 1px solid #d5d5d5;
+    position: relative;
+    height: 35px;
+    padding-left: 10px;
+    padding-top: 8px;
+    padding-right: 10px;
+    z-index: 10;
+}
+
+button{
+    float: right;
+    margin-right: 35px;
+    margin-top: 38px;
+    padding: 4px 5px;
+    color: #fff;
+    border: none;
+    background-color: #01baef;
+    border-bottom: 3px solid #00a7d7;
+    font-size: 11px;
+    font-weight: 500;
+    display: block;
+    cursor: pointer;
+}
+
+#ansbox{
+    padding-bottom: 10px;
+}
+
+#ansbox h2{
+    font-size: 19px;
+    font-weight: 400;
+    line-height: 22px;
+    margin-bottom: 10px;
+    margin-top: 15px;
+}
+
+#newSurv{
+    bottom: 0;
+    right: 0;
+    color: #cf2424;
+    font-size: 70px;
+    position: fixed;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}

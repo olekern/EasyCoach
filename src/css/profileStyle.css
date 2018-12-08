@@ -1,0 +1,342 @@
+
+.square {
+    padding-top: 14px;
+    padding-bottom: 9px;
+}
+
+#team:hover {
+    background-color: #5c5c5c;
+}
+
+#team:hover #teamBox {
+    display: block;
+}
+
+#team:hover a {
+    margin-right: 8px;
+}
+
+.box {
+    width: 7px;
+    height: 83px;
+    top: 0;
+    margin-top: -14px;
+    background-color: #cf2424;
+    float: left;
+    border-right: 1px solid #484848;
+}
+
+#dashBox,
+#calBox,
+#attendBox,
+#survBox,
+#teamBox{
+    display: none;
+}
+
+#dashbord:hover {
+    background-color: #5c5c5c;
+}
+
+#dashbord:hover #dashBox {
+    display: block;
+}
+
+#dashbord:hover a {
+    margin-right: 8px;
+}
+
+#calendar:hover {
+    background-color: #5c5c5c;
+}
+
+#calendar:hover #calBox {
+    display: block;
+}
+
+#calendar:hover a {
+    margin-right: 8px;
+}
+
+#attendance:hover {
+    background-color: #5c5c5c;
+}
+
+#attendance:hover #attendBox {
+    display: block;
+}
+
+#attendance:hover a {
+    margin-right: 8px;
+}
+
+#survey:hover {
+    background-color: #5c5c5c;
+}
+
+#survey:hover #survBox {
+    display: block;
+}
+
+#survey:hover a {
+    margin-right: 8px;
+}
+
+#btm {
+    width: 150px;
+    color: white;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 15px;
+    font-weight: 300;
+    text-align: center;
+    font-size: 12px;
+}
+
+.wrapper {
+    position: relative;
+    float: right;
+    top: 79px;
+    width: calc(100% - 150px);
+}
+
+.profile-box {
+    width: 600px;
+    height: 640px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    background-color: white;
+    border: 1px solid #d5d5d5;
+    text-align: center;
+}
+
+.pb img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+}
+
+#user-txt {
+    font-size: 21px;
+    margin-top: 20px;
+}
+
+#team-txt {
+    font-size: 23px;
+    margin-top: 20px;
+    color: #cf2424;
+}
+
+#list-settings {
+    width: 200px;
+    height: 200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#pass-txt {
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+#pass-txt::before {
+    content: "\f023";
+    position: absolute;
+    font-family: "FontAwesome";
+    font-size: 25px;
+    color: #222E3C;
+    margin-left: -25px;
+    margin-top: -2px;
+}
+
+#changePass {
+    height: 100px;
+    width: 200px;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 90px;
+}
+
+input[type="password"] {
+    border: none;
+    border-bottom: 1px solid #d5d5d5;
+    width: 200px;
+    height: 30px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    text-align: center;
+    font-size: 16px;
+}
+
+#changePass button {
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 6px 8px;
+    color: #fff;
+    border: none;
+    background-color: #D94842;
+    border-bottom: 3px solid #A0332F;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    width: 200px;
+    border-radius: 15px;
+}
+
+#list-pass {
+    margin-top: 15px;
+    font-size: 16px;
+    color: #cf2424;
+}
+
+#change {
+    margin-top: 20px;
+}
+
+#change {
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 6px 8px;
+    color: #fff;
+    border: none;
+    background-color: #D94842;
+    border-bottom: 3px solid #A0332F;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    width: 200px;
+    border-radius: 15px;
+}
+
+#change-team {
+    margin-top: 30px;
+    background-color: white;
+    width: 200px;
+    height: 50px;
+    margin-left: 10px;
+}
+
+#change-team h4 {
+    font-size: 17px;
+}
+
+#change-team select {
+    margin-top: 7px;
+}
+
+input[type="file"] {
+    margin-left: 10px;
+    margin-top: 8px;
+}
+
+/*=====================*\
+|*     CREATE_TEAM     *|
+\*=====================*/
+
+#create-team {
+    margin-top: 25px;
+    margin-bottom: 35px;
+    cursor: pointer;
+}
+
+#create-team i {
+    float: left;
+    font-size: 25px;
+}
+
+#create-team h2 {
+    padding-top: 4px;
+}
+
+#createTeam {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    z-index: 100;
+}
+
+#creator-box {
+    width:  30%;
+    height: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: calc(79px + 2%);
+    background-color: white;
+    border-radius: 2px;
+    text-align: center;
+}
+
+#creator-box h1 {
+    padding-top: 50px;
+    font-size: 30px;
+}
+
+#creator-box input[type="text"] {
+    border: none;
+    border-bottom: 1px solid #d5d5d5;
+    width: 200px;
+    height: 30px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    text-align: center;
+    font-size: 16px;
+}
+
+#creator-box form {
+    margin-top: 30px;
+}
+
+#creator-box button {
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 6px 8px;
+    color: #fff;
+    border: none;
+    background-color: #cf2424;
+    border-bottom: 3px solid #A0332F;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    width: 200px;
+    border-radius: 15px;
+}
+
+#premium h2 {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+#premium h3 {
+    font-size: 12px;
+    color: grey;
+    margin-top: 3px;
+}
+
+
+#premium h1 {
+    font-size: 15px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
+    margin-top: 20px;
+    line-height: 18px;
+    padding-top: 0;
+}

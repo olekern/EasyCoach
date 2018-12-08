@@ -1,0 +1,151 @@
+<!doctype html>
+<!-- Treningsapp -->
+<html>
+
+<head>
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parse/1.11.1/parse.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="./src/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="./src/css/importUsers.css" />
+    <link rel="stylesheet" type="text/css" href="./src/css/app.css" />
+    <title>EasyCoach | Team</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.0/themes/smoothness/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Arimo" rel="stylesheet">
+    <link rel="icon" type="image/png" href="./src/img/blackfavicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="./src/img/blackfavicon-16x16.png" sizes="16x16" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="./src/css/multiple-select.css" rel="stylesheet" />
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300, 400, 500, 600" rel="stylesheet">
+
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-6125588383347359",
+            enable_page_level_ads: true
+        });
+
+    </script>
+</head>
+
+
+<body>
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+    <script>
+        var language = localStorage.getItem("language");
+
+    </script>
+
+    <div id="list-sm"></div>>
+    <script type="text/javascript" src="./src/js/nav.js"></script>>
+
+
+    <div class="wrapper" id="teamOverview">
+
+        <div id="upload-team">
+            <p id="csv-explanation"></p>
+            <p id="first-name" class="check"></p>
+            <p id="surname" class="check"></p>
+            <p id="phone" class="check"></p>
+            <p id="email" class="check"></p>
+            <p id="birthdate" class="check"></p>
+            <p id="address" class="check"></p>
+            <p id="parent1-name" class="check"></p>
+            <p id="parent1-phone" class="check"></p>
+            <p id="parent1-email" class="check"></p>
+            <p id="parent2-name" class="check"></p>
+            <p id="parent2-phone" class="check"></p>
+            <p id="parent2-email" class="check"></p>
+            <div id="upload-box">
+                <input type="file" id="fileInput">
+                <button onclick="Upload()" id="upload"></button>
+            </div>
+            <div id="display-table">
+
+            </div>
+            <button id="import" name="true" onclick="Upload(name)"></button>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore.js"></script>
+
+    <script type="text/javascript" src="./src/js/getteam.js"></script>
+    <script type="text/javascript" src="./src/js/roles.js"></script>
+    <script type="text/javascript" src="./src/js/usersession.js"></script>
+    <script type="text/javascript" src="./src/js/pb.js"></script>
+    <script type="text/javascript" src="./src/js/team.js"></script>
+    <script type="text/javascript" src="./src/js/importUsers.js"></script>
+    <script type="text/javascript" src="./src/js/multiple-select.js"></script>
+
+
+
+    <script>
+        var csvExplanation;
+        var firstName;
+        var surname;
+        var phone;
+        var email;
+        var birthdate;
+        var address;
+        var parent;
+        var parentName;
+        
+        var upload;
+        var startImport;
+        if (language == "NO") {
+            csvExplanation = "Huk av for den informasjonen du ønsker å importere fra din csv fil. Filen må være organisert slik at de punktene du har huket av her står i samme rekkefølge som vist under.";
+            firstName = "Fornavn";
+            surname = "Etternavn";
+            phone = "Mobilnummer";
+            email = "Mailadresse";
+            birthdate = "Fødselsdato (dd.mm.yyyy)";
+            address = "Adresse";
+            parentName = "navn";
+            parent = "Forelder";
+
+            upload = "Last opp .csv fil";
+            startImport = "Start importering";
+        } else {
+            csvExplanation = "Select the parameters you wish to import from your csv file. The file must be arranged in the order selected. ";
+            firstName = "First name";
+            surname = "Surname";
+            phone = "Phone number";
+            email = "E-mail";
+            birthdate = "Birth date (dd.mm.yyyy)";
+            address = "Address";
+            parent = "Parent";
+            upload = "Upload .csv file";
+            startImport = "Start import";
+            parentName = "name";
+        }
+
+        $('#csv-explanation').html(csvExplanation);
+        $('#first-name').append(firstName + '<input class="day-checkbox" id="firstName" type="checkbox" disabled="true" checked>');
+        $('#surname').append(surname + '<input class="day-checkbox" id="surName" type="checkbox">');
+        $('#phone').append(phone + '<input class="day-checkbox" id="phone-nr" type="checkbox">');
+        $('#email').append(email + '<input class="day-checkbox" id="e-mail" type="checkbox">');
+        $('#birthdate').append(birthdate + '<input class="day-checkbox" id="birth-date" type="checkbox">');
+        $('#address').append(address + '<input class="day-checkbox" id="addresses" type="checkbox">');
+        $('#parent1-name').append(parent + '1 ' + parentName +  '<input class="day-checkbox" id="parent1name" type="checkbox">');
+        $('#parent1-phone').append(parent + '1 ' + phone + '<input class="day-checkbox" id="parent1phone" type="checkbox">');
+        $('#parent1-email').append(parent + '1 ' + email + '<input class="day-checkbox" id="parent1email" type="checkbox">');
+        $('#parent2-name').append(parent + '2 ' + parentName + '<input class="day-checkbox" id="parent2name" type="checkbox">');
+        $('#parent2-phone').append(parent + '2 ' + phone + '<input class="day-checkbox" id="parent2phone" type="checkbox">');
+        $('#parent2-email').append(parent + '2 ' + email + '<input class="day-checkbox" id="parent2email" type="checkbox">');
+
+        $('#import').append(startImport);
+        $('#upload').append(upload);
+
+    </script>
+</body>
+
+</html>

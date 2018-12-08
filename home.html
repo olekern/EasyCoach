@@ -1,0 +1,162 @@
+<!doctype html>
+<!-- Treningsapp -->
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parse/1.11.1/parse.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="./src/css/app.css" />
+    <link rel="stylesheet" type="text/css" href="./src/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="./src/css/feed.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>EasyCoach</title>
+    <link rel="icon" type="image/png" href="./src/img/blackfavicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="./src/img/blackfavicon-16x16.png" sizes="16x16" />
+    <link href="./src/css/multiple-select.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300, 400, 500, 600" rel="stylesheet">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-6125588383347359",
+            enable_page_level_ads: true
+        });
+
+    </script>
+
+</head>
+
+<body>
+
+    <script type="text/javascript" src="./src/js/lang.js"></script>
+
+    <script>
+        var language = localStorage.getItem("language");
+
+        var l;
+        if (language == "NO") {
+            
+            l = lang.no;
+            
+        } else if (language == "EN") {
+            
+            l = lang.en;
+            
+        } else {
+            
+            l = lang.en;
+            
+        }
+
+    </script>
+
+    <script type="text/javascript" src="./src/ericjgagnon-wickedpicker-2a8950a/src/wickedpicker.js"></script>
+    <link rel="stylesheet" href="./src/ericjgagnon-wickedpicker-2a8950a/stylesheets/wickedpicker.css">
+
+    <script>
+        var timeString;
+        if (language == "NO") {
+            timeString = "Tid";
+        } else {
+            timeString = "Time";
+        }
+        $(function() {
+            $(".datepicker").datepicker();
+        });
+
+        $('.timepicker').wickedpicker({
+
+            twentyFour: false,
+            //twentyFour: false,
+            upArrow: 'wickedpicker__controls__control-up',
+            downArrow: 'wickedpicker__controls__control-down',
+            close: 'wickedpicker__close',
+            hoverState: 'hover-state',
+            title: 'timeString'
+        });
+
+    </script>
+    
+
+    <div id="list-sm"></div>>
+
+    <script type="text/javascript" src="./src/js/getteam.js"></script>
+    <script type="text/javascript" src="./src/js/nav.js"></script>
+    <script type="text/javascript" src="./src/js/roles.js"></script>
+    <script type="text/javascript" src="./src/js/event.js"></script>
+
+
+    <div class="wrapper">
+        <div class="postClass">
+            <div class="form">
+                <form name="post">
+                    <div id="tekstboks">
+                        <ul id="list-pb"> </ul>
+                        <textarea rows="3" cols="44" name="text" id="postbtn" placeholder=""></textarea>
+                    </div>
+                    <div id="list-group"></div>
+                    <input id="post-file" class="imageInput" type="file" />
+                    <div id="button">
+                        <button name="submit" id="submit-btn" type="button" onclick="Submit()"></button>
+                        <img src="./src/loading/Preloader_8.gif">
+                    </div>
+                </form>
+            </div>
+            <div class="no-posts">
+
+            </div>
+            <div class="posts">
+                <ul id="list-posts"></ul>
+            </div>
+        </div>
+
+        <div id="event">
+            <div id="list-nearest-event"></div>
+            <div id="list-event-answers"></div>
+            <div id="list-options"></div>
+            <div id="list-creator"></div>
+            <div id="list-create-btn"></div>
+        </div>
+
+        <button id="loadMore" onclick="getPosts()"></button>
+    </div>
+
+    <script type="text/javascript">
+        var publishText;
+        var postText;
+        var load;
+
+        if (language == "NO") {
+            publishText = "Publiser";
+            postText = "Skriv ditt innlegg her";
+            load = "Last inn flere innlegg";
+        } else {
+            publishText = "Publish";
+            postText = "Write your post here";
+            load = "Load more posts";
+        }
+
+        $("#submit-btn").html(l.publish);
+
+        $('#postbtn').attr('placeholder', postText);
+
+        $('#loadMore').html(load);
+
+    </script>
+
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore.js"></script>
+    <script type="text/javascript" src="./src/js/multiple-select.js"></script>
+    <script type="text/javascript" src="./src/js/getteam.js"></script>
+    <script type="text/javascript" src="./src/js/pb.js"></script>
+    <script type="text/javascript" src="./src/js/usersession.js"></script>
+    <script type="text/javascript" src="./src/js/feed.js"></script>
+
+</body>

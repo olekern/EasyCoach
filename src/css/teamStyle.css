@@ -1,0 +1,874 @@
+.square {
+    padding-top: 14px;
+    padding-bottom: 9px;
+}
+
+#team {
+    background-color: #5c5c5c;
+    border-top: 1px solid #484848;
+}
+
+#team a {
+    margin-right: 7px;
+}
+
+.box {
+    width: 7px;
+    height: 83px;
+    top: 0;
+    margin-top: -14px;
+    background-color: #cf2424;
+    float: left;
+    border-right: 1px solid #484848;
+}
+
+#dashBox,
+#calBox,
+#attendBox,
+#survBox {
+    display: none;
+}
+
+#dashbord:hover {
+    background-color: #5c5c5c;
+}
+
+#dashbord:hover #dashBox {
+    display: block;
+}
+
+#dashbord:hover a {
+    margin-right: 8px;
+}
+
+#calendar:hover {
+    background-color: #5c5c5c;
+}
+
+#calendar:hover #calBox {
+    display: block;
+}
+
+#calendar:hover a {
+    margin-right: 8px;
+}
+
+#attendance:hover {
+    background-color: #5c5c5c;
+}
+
+#attendance:hover #attendBox {
+    display: block;
+}
+
+#attendance:hover a {
+    margin-right: 8px;
+}
+
+#survey:hover {
+    background-color: #5c5c5c;
+}
+
+#survey:hover #survBox {
+    display: block;
+}
+
+#survey:hover a {
+    margin-right: 9px;
+}
+
+#btm {
+    width: 150px;
+    color: white;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 15px;
+    font-weight: 300;
+    text-align: center;
+    font-size: 12px;
+}
+
+.ct-labels span {
+    color: black;
+}
+
+/*=====================*\
+|*     LISTMEMBERS     *|
+\*=====================*/
+
+#memberInfo{
+    width: 300px;
+    margin-left: 90px;
+}
+
+#memberInfo h1{
+    font-size: 20px;
+    line-height: 30px;
+}
+
+#memberInfo a{
+    margin-top: 20px;
+    color: darkblue;
+    font-size: 13px;
+}
+
+.listPlayers {
+    width: 800px;
+    margin-left: 10%;
+    margin-top: 50px;
+}
+
+.player {
+    width: 400px;
+    height: 250px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid lightgrey;
+    margin-top: 20px;
+}
+
+.playerbox {
+    float: left;
+    margin-left: 30px;
+    margin-top: 0px;
+}
+
+.pb {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    border: 1px solid white;
+    overflow: hidden;
+    float: left;
+}
+
+#list-team img {
+    height: 60px;
+    width: auto;
+}
+
+#list-team h3 {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 25px;
+    width: 300px;
+}
+
+#list-team h4 {
+    color: #a6a6a6;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 25px;
+    text-transform: capitalize;
+}
+
+#list-team h6 {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+    width: 270px;
+    color: black;
+    margin-top: 5px;
+}
+
+.phone-mail {
+    width: 300px;
+}
+
+.phone-mail i {
+    float: right;
+    margin-top: -30px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#i2 {
+    margin-top: -20px;
+}
+
+.text {
+    padding-bottom: 10px;
+}
+
+.text input {
+    border: none;
+    border-bottom: 1px solid black;
+    background: none;
+    width: 200px;
+    margin-top: 10px;
+    font-size: 15px;
+}
+
+.text p {
+    font-size: 12px;
+    color: grey;
+    margin-top: 10px;
+}
+
+
+.kickout {
+    margin-top: 18px;
+    width: 220px;
+}
+
+.kickout i {
+    font-size: 25px;
+}
+
+.kickout p {
+    margin-top: 8px;
+}
+
+.kick {
+    float: left;
+    cursor: pointer;
+}
+
+.confirm {
+    height: 100px;
+    width: 270px;
+    padding: 20px;
+    background-color: white;
+    position: fixed;
+    z-index: 30;
+    top: 0;
+    left: 0;
+    margin-top: 200px;
+    margin-left: 200px;
+    box-shadow: 0px 1px 8px -1px rgba(0, 0, 0, 1);
+    text-align: center;
+    border-radius: 5px;
+}
+
+.confirm h2 {
+    font-size: 20px;
+}
+
+.confirm span {
+    color: #cf2424;
+    font-size: 22px;
+}
+
+.confirm button {
+    margin-top: 15px;
+    padding: 6px 8px;
+    z-index: 10;
+    color: #fff;
+    border: none;
+    background-color: #D94842;
+    border-bottom: 3px solid #A0332F;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100px;
+    border-radius: 15px;
+}
+
+.confirm .no {
+    margin-left: -5px;
+}
+
+.confirm .yes {
+    margin-left: 10px;
+}
+
+.changerole {
+    float: right;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+.role {
+    height: 130px;
+    width: 270px;
+    padding: 20px;
+    background-color: white;
+    position: fixed;
+    z-index: 30;
+    top: 0;
+    left: 0;
+    margin-top: 200px;
+    margin-left: 200px;
+    box-shadow: 0px 1px 8px -1px rgba(0, 0, 0, 1);
+    text-align: center;
+    border-radius: 5px;
+}
+
+.role h2 {
+    font-size: 20px;
+}
+
+.role span {
+    color: #cf2424;
+    font-size: 22px;
+}
+
+.role button {
+    margin-top: 15px;
+    padding: 6px 8px;
+    z-index: 10;
+    color: #fff;
+    border: none;
+    background-color: #D94842;
+    border-bottom: 3px solid #A0332F;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100px;
+    border-radius: 15px;
+}
+
+.role .no {
+    margin-left: -5px;
+}
+
+.role .yes {
+    margin-left: 10px;
+}
+
+.right-block {
+    width: 300px;
+    position: absolute;
+    top: 0;
+    margin-top: 50px;
+    margin-left: 70%;
+    padding-bottom: 30px;
+}
+
+#list-req {
+    max-height: 200px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background-color: white;
+    box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 1);
+    border-radius: 5px;
+}
+
+#request-heading {
+    text-align: center;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 12px;
+}
+
+#all-requests {
+    width: 300px;
+    height: 50px;
+    border-bottom: 1px solid black;
+    display: table;
+}
+
+#all-requests p {
+    text-transform: capitalize;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+#check {
+    width: 100px;
+    height: 50px;
+    float: right;
+    display: table;
+    margin-left: 15px;
+}
+
+#check button {
+    background: none;
+    border: none;
+}
+
+#false {
+    width: 50px;
+    height: 50px;
+}
+
+#true {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+}
+
+#check #close {
+    color: red;
+    font-size: 35px;
+}
+
+#check #check {
+    color: green;
+    font-size: 35px;
+    position: absolute;
+    margin-left: -32px;
+    margin-top: -21px;
+}
+
+#check #false:hover {
+    cursor: pointer;
+}
+
+#check #true:hover {
+    cursor: pointer;
+}
+
+#list-groups {
+    background-color: white;
+    margin-top: 50px;
+    box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 1);
+    border-radius: 5px;
+}
+
+#list-groups h2 {
+    text-align: center;
+    font-size: 20px;
+    padding-top: 10px;
+    margin-bottom: 12px;
+}
+
+.groups h3 {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 17px;
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+.groups .delete-group i {
+    float: right;
+    margin-right: 30px;
+    margin-top: -20px;
+    cursor: pointer;
+}
+
+hr {
+    display: none;
+}
+
+.username button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.username button:hover + hr {
+    display: block;
+    border: none;
+    border-top: 2px solid black;
+    color: black;
+    background-color: black;
+    height: 2px;
+    width: 100%;
+    margin-top: -11px;
+    margin-bottom: 19px;
+}
+
+.change-group {
+    height: 55px;
+    display: table;
+    width: 100%;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.change-group i {
+    color: #cf2424;
+    font-size: 30px;
+    display: table-cell;
+    vertical-align: middle;
+    padding-left: 60px;
+}
+
+.change-group p {
+    font-size: 16px;
+    display: table-cell;
+    vertical-align: middle;
+    padding-left: 15px;
+}
+
+#new {
+    height: 55px;
+    display: table;
+    width: 100%;
+    cursor: pointer;
+}
+
+#new i {
+    color: #cf2424;
+    font-size: 45px;
+    display: table-cell;
+    vertical-align: middle;
+    padding-left: 30px;
+}
+
+#new p {
+    font-size: 18px;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+#members {
+    width: 300px;
+    position: fixed;
+    top: 0;
+    margin-top: 250px;
+    margin-left: 40%;
+    background-color: white;
+    z-index: 200;
+    box-shadow: 0px 1px 6px -1px rgba(0, 0, 0, 1);
+    border-radius: 5px;
+}
+
+#groupname {
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
+    Microsoft Sans Serif;
+    font-weight: 400;
+    font-size: 17px;
+    overflow: auto;
+    resize: none;
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    border: none;
+    border-bottom: 1px solid #d5d5d5;
+    position: relative;
+    height: 35px;
+    padding-left: 10px;
+    padding-top: 8px;
+    padding-right: 10px;
+}
+
+.addmembers p {
+    text-align: center;
+    margin-top: 12px;
+}
+
+.select-members {
+    margin-top: 10px;
+    width: 250px;
+    display: block;
+    margin-left: 25px;
+}
+
+.finishgroup {
+    font-size: 16px;
+    height: 35px;
+    width: 80px;
+    background-color: #D94842;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-bottom: 3px solid #A0332F;
+    border-radius: 5px;
+    box-shadow: 0px 1px 8px -1px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    z-index: 10;
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.addnewmembers p {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+#password-box {
+    height: auto;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0px 1px 8px -1px rgba(0, 0, 0, 0.5);
+    margin-bottom: 50px;
+    text-align: center;
+    padding-bottom: 15px;
+    border-radius: 5px;
+}
+
+#password-box h3 {
+    font-size: 18px;
+    padding-top: 15px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 22px;
+}
+
+#password-box span {
+    font-weight: 600;
+}
+
+#password-box input {
+    font-family: 'Open Sans', sans-serif, "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
+    Microsoft Sans Serif;
+    font-weight: 400;
+    font-size: 15px;
+    resize: none;
+    width: 60%;
+    height: 28px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid #d5d5d5;
+    padding-left: 8px;
+    padding-top: 3px;
+    padding-right: 8px;
+    margin-top: 15px;
+    text-align: center;
+}
+
+#password-box h4 {
+    color: grey;
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+#create {
+    height: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: white;
+    box-shadow: 0px 1px 8px -1px rgba(0, 0, 0, 0.5);
+    margin-bottom: 50px;
+    border-radius: 5px;
+}
+
+#create #add-box {
+    cursor: pointer;
+}
+
+#create #add-box i {
+    color: #cf2424;
+    font-size: 30px;
+    margin-top: -7px;
+    margin-left: -10px;
+}
+
+#create #add-box h2 {
+    text-align: center;
+    font-weight: 600;
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#create #cancel {
+    width: 0px;
+    height: 20px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+#create i {
+    font-size: 20px;
+    cursor: pointer;
+    float: left;
+    margin-left: 20px;
+    z-index: 10;
+}
+
+#form {
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+#form h3 {
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70px;
+}
+
+#form #athlete {
+    position: relative;
+    margin-top: -20px;
+    margin-right: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+
+#form input {
+    width: 70%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Open Sans', sans-serif, "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
+    Microsoft Sans Serif;
+    font-weight: 400;
+    font-size: 13px;
+    resize: none;
+    height: 24px;
+    border: 1px solid #d5d5d5;
+    padding-left: 8px;
+    padding-top: 3px;
+    padding-right: 8px;
+    margin-bottom: 10px;
+}
+
+/*=====================*\
+|*     SUBSCRIPTION    *|
+\*=====================*/
+
+#list-subscription {
+    height: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: white;
+    box-shadow: 0px 1px 8px -1px rgba(0, 0, 0, 0.5);
+    margin-bottom: 50px;
+    margin-top: 0px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+#list-subscription h1 {
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 10px;
+}
+
+#list-subscription span {
+    text-transform: capitalize;
+}
+
+#list-subscription #green {
+    color: #2E9C00;
+}
+
+#list-subscription #red {
+    color: #cf2424;
+}
+
+#list-subscription a {
+    margin-top: 40px;
+    font-size: 18px;
+    line-height: 20px;
+    margin-bottom: 10px;
+    color: darkblue;
+}
+
+#list-subscription h3 {
+    margin-top: 10px;
+    color: grey;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+
+#showBenefits {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    display: none;
+}
+
+#confirm-unsub {
+    height: 100px;
+    width: 270px;
+    padding: 20px;
+    background-color: white;
+    position: fixed;
+    z-index: 30;
+    top: 0;
+    left: 0;
+    margin-top: 170px;
+    margin-left: 700px;
+    box-shadow: 0px 1px 8px -1px rgba(0, 0, 0, 1);
+    text-align: center;
+    border-radius: 5px;
+}
+
+#confirm-unsub h2 {
+    font-size: 17px;
+}
+
+#confirm-unsub span {
+    color: #cf2424;
+    font-size: 22px;
+}
+
+#confirm-unsub button {
+    margin-top: 15px;
+    padding: 6px 8px;
+    z-index: 10;
+    color: #fff;
+    border: none;
+    background-color: #D94842;
+    border-bottom: 3px solid #A0332F;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100px;
+    border-radius: 15px;
+}
+
+#confirm-unsub .no {
+    margin-left: -5px;
+}
+
+#confirm-unsub .yes {
+    margin-left: 10px;
+}
+
+#img {
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    height: auto;
+    padding: 20px;
+    margin-top: 150px;
+    z-index: 210;
+    position: relative;
+}
+
+#img img {
+    width: 300px;
+    height: auto;
+}
+
+
+#upload-file {
+    height: auto;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0px 1px 8px -1px rgba(0, 0, 0, 0.5);
+    margin-bottom: 50px;
+    text-align: center;
+    border-radius: 5px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#upload-file a {
+    color: black;
+    text-decoration: none;
+}
+
+#upload-file i {
+    float: left;
+    color: #cf2424;
+    font-size: 40px;
+    padding-left: 35px;
+    margin-top: -5px;
+}
+
+#upload-file h1 {
+    font-weight: 700;
+    width: 80%;
+    margin-left: 40px;
+}
+
+
+
+

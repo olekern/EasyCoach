@@ -1,0 +1,156 @@
+<!doctype html>
+<!-- Registrering -->
+<html>
+
+<head>
+    <meta charset="utf-8">
+
+    <title>EasyCoach | Register Your New Account And Start Using EasyCoach!</title>
+    <meta name="description" content="My Parse App">
+    <meta name="viewport" content="width=device-width">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parse/1.11.1/parse.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="./src/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="./src/css/regStyle.css" />
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" type="image/png" href="./src/img/blackfavicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="./src/img/blackfavicon-16x16.png" sizes="16x16" />
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300, 400, 500, 600" rel="stylesheet">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+</head>
+
+<body OnLoad="document.login.username.focus();">
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+    <div class="imac">
+        <img src="./src/img/imac.png">
+    </div>
+
+
+    <div class="logForm">
+
+        <div class="innlogging">
+            <img src="./src/img/ball.png">
+            <form name="login" action="#">
+                <div class="form-input">
+                    <input type="text" name="username" id="username" onkeydown="if (event.keyCode == 13)
+                        document.login.password.focus();" />
+                </div>
+                <div class="pass">
+                    <input type="password" name="password" id="pass" onkeydown="if (event.keyCode == 13)
+                        document.getElementById('btnSearch').click()" />
+                    <p id="forgottenPass" onclick="forgottenPassword()"></p>
+                </div>
+                <button name="submit" id="btnSearch" type="button" onclick="logIn()" class="btn">Logg inn</button>
+                <div id="list-error">
+                </div>
+                <div id="opener"><a href="#1" name="1" id="registerhere" onclick="return show();">Registrer deg her</a></div>
+            </form>
+        </div>
+    </div>
+    <script>
+        function show() {
+            if (document.getElementById('benefits').style.display == 'none') {
+                document.getElementById('benefits').style.display = 'block';
+            }
+            return false;
+        }
+
+        function hide() {
+            if (document.getElementById('benefits').style.display == 'block') {
+                document.getElementById('benefits').style.display = 'none';
+            }
+            return false;
+        }
+
+    </script>
+
+
+    <div class="register" id="benefits" style="display:none;">
+        <div class="registrering">
+            <form name="signup" id="signup" action="#">
+                <div class="name" id="name">
+                    <input type="text" name="username" id="fullname" style="text-transform: capitalize;" onkeydown="if (event.keyCode == 13)
+                        document.signup.mail.focus();" />
+                </div>
+                <div class="mail">
+                    <input type="text" name="mail" id="mail" onkeydown="if (event.keyCode == 13)
+                        document.signup.password.focus();" />
+                </div>
+                <div class="passord">
+                    <input type="password" name="password" id="password" onkeydown="if (event.keyCode == 13)
+                        document.getElementById('btnSearchReg').click()" />
+                </div>
+                <!--
+            <form action="?" method="POST">
+              <div class="g-recaptcha" data-sitekey="6Lc_-jcUAAAAAFBXCaokDp28gbkh8Mbjwf6bNzVk"></div>
+              <br/>
+              <input type="submit" value="Submit">
+            </form>
+-->
+                <button name="submit" type="button" onclick="signUp()" class="btn2" id="btnSearchReg">Registrer!</button>
+            </form>
+        </div>
+        <div id="upbutton"><a id="cancel" href onclick="return hide();">Avbryt</a></div>
+    </div>
+
+    <script type="text/javascript">
+        var language = localStorage.getItem("language");
+
+        var password;
+        var fullname;
+        var mail;
+        var login;
+        var registerhere;
+        var register;
+        var cancel;
+        var forgotten;
+
+        if (language == "NO") {
+            mail = "Mail";
+            fullname = "Fullt navn";
+            password = "Passord";
+            login = "Logg inn";
+            registerhere = "Registrer deg her";
+            register = "Registrer";
+            cancel = "Avbryt";
+            forgotten = "Glemt passord";
+        } else {
+            mail = "Mail";
+            fullname = "Full name";
+            password = "Password";
+            login = "Log in";
+            registerhere = "Register here";
+            register = "Register";
+            cancel = "Cancel";
+            forgotten = "Forgotten password";
+        }
+
+        $('#username').attr('placeholder', mail);
+        $('#pass').attr('placeholder', password);
+        $('#fullname').attr('placeholder', fullname);
+        $('#mail').attr('placeholder', mail);
+        $('#password').attr('placeholder', password);
+        $('#btnSearch').html(login);
+        $('#registerhere').html(registerhere);
+        $('#btnSearchReg').html(register + '!');
+        $('#cancel').html(cancel);
+        $('#forgottenPass').html(forgotten + '?');
+
+    </script>
+
+    <script src="./src/js/registration.js"></script>
+
+    <script type="text/javascript" src="./src/js/login.js"></script>
+
+
+    <div class="footer3">Copyright &copy Klubben 2018</div>
+</body>
+
+</html>
